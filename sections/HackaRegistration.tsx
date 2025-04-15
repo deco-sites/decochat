@@ -84,7 +84,7 @@ export default function HackaRegistration({
   ],
 }: Props) {
   return (
-    <div class="w-full bg-dc-50 px-4 py-24 md:py-32">
+    <div class="w-full bg-dc-50 px-4 py-24 md:py-40">
       <div class="max-w-[1200px] flex flex-col gap-16 mx-auto">
         <div class="text-center">
           <Badge text={badgeText} variant="primary" />
@@ -99,8 +99,8 @@ export default function HackaRegistration({
         </div>
 
         <div class="flex justify-center">
-          <div class="w-full md:w-fit bg-white/50 backdrop-blur-sm rounded-[2.5rem] p-6 md:p-12 shadow-xl shadow-primary-dark/5 border border-primary-dark/10">
-            <div class="relative w-full md:min-w-[600px]">
+          <div class="w-fit bg-white/50 backdrop-blur-sm rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-primary-dark/5 border border-primary-dark/10">
+            <div class="relative min-w-[400px] md:min-w-[600px]">
               <HackaRegistrationForm
                 buttonText={buttonText}
                 successMessage={successMessage}

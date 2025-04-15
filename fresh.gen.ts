@@ -11,8 +11,10 @@ import * as $HackaAITechContent from "./islands/HackaAITechContent.tsx";
 import * as $HackaFAQAccordion from "./islands/HackaFAQAccordion.tsx";
 import * as $HackaFAQChat from "./islands/HackaFAQChat.tsx";
 import * as $HackaHeroContent from "./islands/HackaHeroContent.tsx";
+import * as $HackaHeroInteractive from "./islands/HackaHeroInteractive.tsx";
 import * as $HackaInteractive from "./islands/HackaInteractive.tsx";
 import * as $HackaRegistrationForm from "./islands/HackaRegistrationForm.tsx";
+import * as $PixelTrail from "./islands/PixelTrail.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -28,8 +30,10 @@ const manifest = {
     "./islands/HackaFAQAccordion.tsx": $HackaFAQAccordion,
     "./islands/HackaFAQChat.tsx": $HackaFAQChat,
     "./islands/HackaHeroContent.tsx": $HackaHeroContent,
+    "./islands/HackaHeroInteractive.tsx": $HackaHeroInteractive,
     "./islands/HackaInteractive.tsx": $HackaInteractive,
     "./islands/HackaRegistrationForm.tsx": $HackaRegistrationForm,
+    "./islands/PixelTrail.tsx": $PixelTrail,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

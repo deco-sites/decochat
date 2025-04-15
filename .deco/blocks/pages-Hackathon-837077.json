@@ -7,7 +7,7 @@
       "section": {
         "__resolveType": "site/sections/HackaHero.tsx",
         "title": "Build the future of AI with us",
-        "description": "Everyone's talking about AI Agents and MCP servers—but can you actually build them? If you're curious about using Agents and MCPs to automate tasks and supercharge your data (whether you're a pro coder or brand-new to tech), join our Hackathon and learn how to conquer the AI wave.",
+        "description": "<p>Everyone’s talking about AI Agents and MCP servers—but can you build them?<br>Whether you’re a pro coder or brand-new to tech, join our Hackathon to automate tasks, supercharge your data, and conquer the AI wave.</p>",
         "ctaText": "Register now",
         "ctaLink": "#register",
         "endDate": "2025-04-25T23:00:00.000Z",
@@ -26,18 +26,10 @@
             "text": "Over $1,000 in prizes",
             "icon": "attach_money"
           }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaWhoIsItFor.tsx",
-        "title": "Who is it for?",
-        "description": "We believe anyone can solve problems and automate work with AI—no heavy coding skills required! Our platform, deco.chat, features plug-and-play integrations and a conversational assistant that sets up Agents for you. If you're more experienced or just love to tinker, you'll have full access to our framework to build new MCPs, integrate unique data sources, and create complex Agents.",
-        "badgeText": "Calling All Devs & Non-Devs",
-        "id": "who-is-it-for",
-        "image": "https://assets.decocache.com/decochat/d93766c0-cbe7-4a90-9fa3-11a82f948458/Exported-from-Deco-Chat-(1).gif"
+        ],
+        "badgeIsDark": false,
+        "badgeVariant": "yellow",
+        "backgroundImage": "https://assets.decocache.com/decochat/13bf3020-4db9-41b2-955e-587cb3a69ba9/bg.svg"
       }
     },
     {
@@ -98,6 +90,17 @@
             "icon": "trending_up"
           }
         ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaWhoIsItFor.tsx",
+        "title": "Who is it for?",
+        "description": "We believe anyone can solve problems and automate work with AI—no heavy coding skills required! Our platform, deco.chat, features plug-and-play integrations and a conversational assistant that sets up Agents for you. If you're more experienced or just love to tinker, you'll have full access to our framework to build new MCPs, integrate unique data sources, and create complex Agents.",
+        "badgeText": "Calling All Devs & Non-Devs",
+        "id": "who-is-it-for",
+        "image": "https://assets.decocache.com/decochat/d93766c0-cbe7-4a90-9fa3-11a82f948458/Exported-from-Deco-Chat-(1).gif"
       }
     },
     {
@@ -273,50 +276,14 @@
         ],
         "examples": [
           {
-            "title": "Example of MCP Servers",
-            "image1": "",
+            "title": "MCP Servers",
+            "image1": "https://assets.decocache.com/decochat/3894c6f6-0274-4122-8139-65ff14dcc4a9/mcps-example.png",
             "image2": ""
           },
           {
-            "title": "Example Agent",
-            "image1": "",
+            "title": "AI Agents",
+            "image1": "https://assets.decocache.com/decochat/ae410b3d-b5bc-4d90-806c-3a96bd26a64d/agents-examples.png",
             "image2": ""
-          }
-        ]
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaFAQ.tsx",
-        "title": "Frequently Asked Questions",
-        "description": "Have questions about the hackathon? Find answers to common queries below. If you need further assistance, feel free to reach out to our team.",
-        "id": "faq",
-        "badgeText": "FAQ",
-        "faqs": [
-          {
-            "question": "What are the submission requirements?",
-            "answer": "Your project should demonstrate the use of MCPs and AI Agents on the Deco platform. Include a working demo, source code, and documentation explaining your solution. Make sure to highlight how your project leverages the platform's capabilities."
-          },
-          {
-            "question": "Can I participate remotely?",
-            "answer": "Yes! The hackathon is fully remote and asynchronous. You can participate from anywhere in the world, working on your project at your own pace within the hackathon timeline."
-          },
-          {
-            "question": "How will projects be evaluated?",
-            "answer": "Projects will be judged based on creativity, technical implementation, practical utility, and effective use of MCPs and AI Agents. The judging panel will also consider code quality, documentation, and presentation."
-          },
-          {
-            "question": "Is there a team size limit?",
-            "answer": "You can participate individually or in teams of up to 4 members. All team members should be registered on the platform and listed in the project submission."
-          },
-          {
-            "question": "What resources are available?",
-            "answer": "You'll have access to documentation, starter templates, office hours with mentors, and a community Discord channel. We'll also provide workshops and technical support throughout the event."
-          },
-          {
-            "question": "When will winners be announced?",
-            "answer": "Winners will be announced within two weeks after the submission deadline. Results will be shared on our website, social media, and directly with all participants via email."
           }
         ]
       }
@@ -326,10 +293,10 @@
       "section": {
         "__resolveType": "site/sections/HackaRegistration.tsx",
         "title": "Secure your spot",
+        "badgeText": "Registration",
         "buttonText": "Complete Registration",
         "successMessage": "Registration successful! Check your email for confirmation.",
         "errorMessage": "Something went wrong. Please try again.",
-        "badgeText": "Registration",
         "experienceLevels": [
           {
             "value": "nube",
@@ -350,6 +317,50 @@
             "value": "ai-specialist",
             "label": "AI Specialist",
             "description": "I've developed AI systems or integrated AI frameworks extensively."
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaFAQ.tsx",
+        "title": "Frequently Asked Questions",
+        "badgeText": "FAQ",
+        "description": "Have questions about the hackathon? Find answers to common queries below. Still have questions? Join our Discord or email hackathon@deco.cx.",
+        "id": "faq",
+        "faqs": [
+          {
+            "question": "Do I need prior AI experience?",
+            "answer": "Not at all—this Hackathon has everything you need to get started."
+          },
+          {
+            "question": "Is there a cost?",
+            "answer": "Nope! It’s totally free."
+          },
+          {
+            "question": "Can I join alone or must I form a team?",
+            "answer": "You can fly solo or team up—whichever you prefer."
+          },
+          {
+            "question": "What exactly are MCPs and AI Agents?",
+            "answer": "They’re frameworks that let you build advanced, context-aware AI solutions (see details above)."
+          },
+          {
+            "question": "How will I get support?",
+            "answer": "We have scheduled Office Hours plus mentors on Discord for questions."
+          },
+          {
+            "question": "Which programming languages can I use?",
+            "answer": "JavaScript or TypeScript are ideal, but any language calling MCP APIs works."
+          },
+          {
+            "question": "What happens to projects after the Hackathon?",
+            "answer": "They remain yours. We encourage you to keep building and even showcase them in our Agent Catalog."
+          },
+          {
+            "question": "Do I need a powerful computer?",
+            "answer": "A normal setup is fine. The heavy lifting happens in the cloud."
           }
         ]
       }
