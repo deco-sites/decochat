@@ -1,6 +1,6 @@
 {
   "name": "Hackathon",
-  "path": "/hackathon",
+  "path": "/",
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
