@@ -40,7 +40,7 @@ export default function HackaFAQChat({ faqs }: Props) {
                   <span class="absolute -left-8 top-1/2 -translate-y-1/2 text-dc-700/30 transition-all duration-300 text-xl font-medium group-hover:text-dc-700/50">
                     {openIndex.value === index ? "−" : "+"}
                   </span>
-                  <p class="text-dc-700">
+                  <p class="text-dc-700 text-lg sm:text-xl">
                     {faq.question}
                   </p>
                 </div>
@@ -56,7 +56,7 @@ export default function HackaFAQChat({ faqs }: Props) {
               }`}
             >
               <div class="bg-primary-dark rounded-2xl rounded-tl-none px-6 py-4 max-w-[85%]">
-                <p class="text-primary-light">
+                <p class="text-primary-light text-lg sm:text-xl">
                   {faq.answer}
                 </p>
               </div>

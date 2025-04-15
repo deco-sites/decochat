@@ -86,10 +86,10 @@ export default function HackaFAQ({
       <div class="max-w-[1200px] mx-auto">
         <div class="text-center mb-12 md:mb-16">
           <Badge text={badgeText} variant="purple" />
-          <h2 class="text-3xl md:text-5xl text-primary-dark font-medium mt-6 mb-6 md:mb-8">
+          <h2 class="text-3xl md:text-5xl text-dc-800 font-medium mt-6 mb-6 md:mb-8">
             {title}
           </h2>
-          <p class="text-base md:text-lg lg:text-xl text-primary-dark/80 max-w-3xl mx-auto">
+          <p class="text-lg md:text-xl text-dc-600 max-w-3xl mx-auto">
             {description}
           </p>
         </div>

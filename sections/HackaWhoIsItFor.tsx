@@ -50,7 +50,7 @@ export default function HackaWhoIsItFor({
               {title}
             </h2>
             {description.split("! ").map((paragraph, index) => (
-              <p class="text-lg text-primary-dark/80 leading-relaxed mb-6 last:mb-0">
+              <p class="text-lg sm:text-xl text-dc-600 leading-relaxed mb-6 last:mb-0">
                 {paragraph +
                   (index < description.split("! ").length - 1 ? "!" : "")}
               </p>

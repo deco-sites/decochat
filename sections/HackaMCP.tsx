@@ -158,7 +158,7 @@ export default function HackaMCP({
           <h2 class="text-3xl md:text-5xl text-dc-900 font-medium mt-6 mb-8">
             {title}
           </h2>
-          <p class="text-lg md:text-xl text-dc-800 max-w-3xl mx-auto">
+          <p class="text-lg sm:text-xl text-dc-800 max-w-3xl mx-auto">
             {description}
           </p>
         </div>

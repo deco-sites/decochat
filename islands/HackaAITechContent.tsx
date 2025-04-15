@@ -146,7 +146,7 @@ export default function HackaAITechContent({
     <div ref={sectionRef}>
       <div
         ref={contentRef}
-        class="text-center mb-16 md:mb-24"
+        class="text-center"
       >
         <div class="flex items-center justify-center gap-4">
           <Badge text={mcpBadgeText} variant="purple" />
@@ -155,12 +155,12 @@ export default function HackaAITechContent({
         <h2 class="text-3xl md:text-5xl text-dc-900 font-medium mt-6 mb-8">
           {title}
         </h2>
-        <p class="text-lg md:text-xl text-dc-700 max-w-3xl mx-auto">
+        <p class="text-dc-700 text-lg sm:text-xl max-w-3xl mx-auto mb-12">
           {description}
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col">
           <div class="min-h-[140px] mb-3">
             <h3 class="text-2xl text-dc-900 font-medium mb-4 flex items-center gap-3">
@@ -169,7 +169,7 @@ export default function HackaAITechContent({
               </span>
               {mcpTitle}
             </h3>
-            <p class="text-dc-700 text-lg">
+            <p class="text-dc-700 text-lg sm:text-xl">
               {mcpDescription}
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function HackaAITechContent({
                     {capability.title}
                   </h4>
                   {capability.description && (
-                    <p class="text-dc-700 mt-1">
+                    <p class="text-dc-700 text-lg sm:text-xl mt-1">
                       {capability.description}
                     </p>
                   )}
@@ -207,7 +207,7 @@ export default function HackaAITechContent({
               </span>
               {agentTitle}
             </h3>
-            <p class="text-dc-700 text-lg">
+            <p class="text-dc-700 text-lg sm:text-xl">
               {agentDescription}
             </p>
           </div>
@@ -227,7 +227,7 @@ export default function HackaAITechContent({
                     {capability.title}
                   </h4>
                   {capability.description && (
-                    <p class="text-dc-700 mt-1">
+                    <p class="text-dc-700 text-lg sm:text-xl mt-1">
                       {capability.description}
                     </p>
                   )}

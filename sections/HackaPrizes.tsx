@@ -219,7 +219,7 @@ export default function HackaPrizes({
                           >
                             {item.icon}
                           </span>
-                          <span class={`${style.text} text-lg`}>
+                          <span class={`${style.text} text-lg sm:text-xl`}>
                             {item.text}
                           </span>
                         </div>

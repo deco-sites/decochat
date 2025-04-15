@@ -132,14 +132,14 @@ export default function HackaAbout({
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
           <div ref={contentRef} class="max-w-xl">
             <Badge text={badgeText} variant="primary" />
-            <h2 class="text-3xl md:text-5xl text-primary-dark font-medium mt-6 mb-8">
+            <h2 class="text-3xl md:text-5xl text-dc-800 font-medium mt-6 mb-8">
               {title}
             </h2>
             <p
-              class="text-lg md:text-xl text-dc-700"
+              class="text-lg sm:text-xl text-dc-600"
               dangerouslySetInnerHTML={{
                 __html:
-                  `<div class="space-y-0 text-lg md:text-xl text-dc-700 md:leading-[1.5]">${description}</div>`,
+                  `<div class="space-y-0 text-lg sm:text-xl text-dc-600 md:leading-[1.5]">${description}</div>`,
               }}
             >
             </p>
@@ -157,7 +157,7 @@ export default function HackaAbout({
                       {highlight.icon}
                     </span>
                   </div>
-                  <p class="text-lg text-dc-700 flex-1">
+                  <p class="text-lg sm:text-xl text-dc-700 flex-1">
                     {highlight.text}
                   </p>
                 </div>

@@ -249,23 +249,24 @@ export default function HackaFormat({
       class="w-full bg-dc-50 px-4 py-24 md:py-32"
     >
       <div class="max-w-[1200px] mx-auto">
-        <div
-          ref={contentRef}
-          class="text-center mb-16 md:mb-24"
-        >
-          <Badge text={badgeText} variant="primary" />
-          <h2 class="text-3xl md:text-5xl text-primary-dark font-medium mt-6 mb-8">
-            {title}
-          </h2>
-          <p class="text-lg md:text-xl text-primary-dark/60 max-w-3xl mx-auto">
-            {description}
-          </p>
-        </div>
+        {/* Top section: Main content on left, Highlights on right */}
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 mb-16 md:mb-24">
+          {/* Main Content */}
+          <div
+            ref={contentRef}
+            class="text-left order-1"
+          >
+            <Badge text={badgeText} variant="primary" />
+            <h2 class="text-3xl md:text-5xl text-primary-dark font-medium mt-6 mb-8">
+              {title}
+            </h2>
+            <p class="text-lg md:text-xl text-dc-600 max-w-3xl">
+              {description}
+            </p>
+          </div>
 
-        {/* Main Grid: Highlights + Timeline */}
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-24">
           {/* Key Highlights */}
-          <div class="h-full flex flex-col">
+          <div class="h-full flex flex-col order-2">
             <div
               ref={highlightsRef}
               class="space-y-4 h-full flex flex-col justify-center"
@@ -278,10 +279,10 @@ export default function HackaFormat({
                     </span>
                   </div>
                   <div>
-                    <h4 class="text-base md:text-lg text-primary-dark font-medium">
+                    <h4 class="text-primary-dark font-medium">
                       {highlight.title}
                     </h4>
-                    <p class="text-sm md:text-base text-primary-dark/60">
+                    <p class="text-lg sm:text-xl text-primary-dark/60">
                       {highlight.info}
                     </p>
                   </div>
@@ -289,82 +290,86 @@ export default function HackaFormat({
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Timeline */}
-          <div class="h-full flex flex-col">
-            <div
-              ref={timelineRef}
-              class="space-y-6 h-full flex flex-col justify-center"
-            >
-              {timelineEvents.map((event, index) => (
-                <div
-                  class={`backdrop-blur-sm rounded-2xl p-8 border ${
-                    index === 0
-                      ? "bg-primary-light border-primary-light"
-                      : "bg-yellow-light border-yellow-light"
-                  }`}
-                >
-                  <div class="flex flex-col md:flex-row md:items-center gap-4 mb-6">
-                    <div class="flex items-center gap-3 whitespace-nowrap">
-                      <div
-                        class={`w-10 h-10 rounded-lg flex items-center justify-center font-medium ${
-                          index === 0
-                            ? "bg-primary-dark text-primary-light"
-                            : "bg-yellow-dark text-yellow-light"
-                        }`}
-                      >
-                        {String(index + 1).padStart(2, "0")}
-                      </div>
-                      <h4
-                        class={`text-xl font-medium ${
-                          index === 0 ? "text-primary-dark" : "text-yellow-dark"
-                        }`}
-                      >
-                        {event.date}
-                      </h4>
-                    </div>
+        {/* Timeline Events in 2 columns */}
+        <div class="mb-16 md:mb-24">
+          <div
+            ref={timelineRef}
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12"
+          >
+            {timelineEvents.map((event, index) => (
+              <div
+                class={`backdrop-blur-sm rounded-2xl p-8 border ${
+                  index === 0
+                    ? "bg-primary-light border-primary-light"
+                    : "bg-yellow-light border-yellow-light"
+                }`}
+              >
+                <div class="flex flex-col md:flex-row md:items-center gap-4 mb-6">
+                  <div class="flex items-center gap-3 whitespace-nowrap">
                     <div
-                      class={`hidden md:block w-8 h-[2px] ${
-                        index === 0 ? "bg-primary-dark/20" : "bg-yellow-dark/20"
+                      class={`w-10 h-10 rounded-lg flex items-center justify-center font-medium ${
+                        index === 0
+                          ? "bg-primary-dark text-primary-light"
+                          : "bg-yellow-dark text-yellow-light"
                       }`}
                     >
+                      {String(index + 1).padStart(2, "0")}
                     </div>
                     <h4
                       class={`text-xl font-medium ${
                         index === 0 ? "text-primary-dark" : "text-yellow-dark"
                       }`}
                     >
-                      {event.title}
+                      {event.date}
                     </h4>
                   </div>
                   <div
-                    class={`space-y-3 relative before:absolute before:left-[6px] before:top-0 before:bottom-0 before:w-[2px] ${
-                      index === 0
-                        ? "before:bg-primary-dark/20"
-                        : "before:bg-yellow-dark/20"
+                    class={`hidden md:block w-8 h-[2px] ${
+                      index === 0 ? "bg-primary-dark/20" : "bg-yellow-dark/20"
                     }`}
                   >
-                    {event.items.map((item) => (
-                      <div class="flex items-start gap-4 group pl-6">
-                        <div
-                          class={`absolute left-[6px] w-3 h-3 rounded-full mt-[8px] -translate-x-[6px] group-hover:scale-150 transition-transform ${
-                            index === 0 ? "bg-primary-dark" : "bg-yellow-dark"
-                          }`}
-                        >
-                        </div>
-                        <p
-                          class={index === 0
-                            ? "text-primary-dark/90"
-                            : "text-yellow-dark/90"}
-                        >
-                          {item}
-                        </p>
-                      </div>
-                    ))}
                   </div>
+                  <h4
+                    class={`text-xl font-medium ${
+                      index === 0 ? "text-primary-dark" : "text-yellow-dark"
+                    }`}
+                  >
+                    {event.title}
+                  </h4>
                 </div>
-              ))}
-            </div>
+                <div
+                  class={`space-y-8 relative before:absolute before:left-[6px] before:top-0 before:bottom-0 before:w-[2px] ${
+                    index === 0
+                      ? "before:bg-primary-dark/20"
+                      : "before:bg-yellow-dark/20"
+                  }`}
+                >
+                  {event.items.map((item) => (
+                    <div class="flex items-start gap-4 group pl-6">
+                      <div
+                        class={`absolute left-[6px] w-3 h-3 rounded-full mt-[8px] -translate-x-[6px] group-hover:scale-150 transition-transform ${
+                          index === 0
+                            ? "bg-primary-dark/50"
+                            : "bg-yellow-dark/50"
+                        }`}
+                      >
+                      </div>
+                      <p
+                        class={`text-lg sm:text-xl ${
+                          index === 0
+                            ? "text-primary-dark/90"
+                            : "text-yellow-dark/90"
+                        }`}
+                      >
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -387,7 +392,7 @@ export default function HackaFormat({
                 <h4 class="text-lg md:text-xl text-primary-dark font-medium mb-2">
                   {item.title}
                 </h4>
-                <p class="text-sm md:text-base text-primary-dark/60">
+                <p class="text-lg sm:text-xl text-primary-dark/60">
                   {item.description}
                 </p>
               </div>

@@ -204,15 +204,15 @@ export default function HackaIdeas({
           </div>
 
           {/* Ideas Grid */}
-          <div class="max-w-5xl mx-auto px-4 md:px-8">
+          <div class="max-w-4xl mx-auto">
             <div
               ref={ideasRef}
-              class="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-6 md:gap-y-8"
+              class="grid grid-cols-1 md:grid-cols-2 gap-8"
             >
               {ideas.map((idea) => {
                 const style = variantStyles[idea.variant];
                 return (
-                  <div class="flex items-start gap-4 md:gap-6 group">
+                  <div class="flex items-start gap-4 md:gap-6 group bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-primary-dark/10">
                     <div
                       class={`w-12 md:w-14 h-12 md:h-14 rounded-xl ${style.accent} flex items-center justify-center flex-shrink-0`}
                     >
@@ -226,7 +226,7 @@ export default function HackaIdeas({
                       <h3 class="text-lg md:text-xl font-medium text-primary-dark group-hover:text-primary transition-colors duration-300 mb-2">
                         {idea.title}
                       </h3>
-                      <p class="text-sm md:text-base text-primary-dark/80">
+                      <p class="text-lg sm:text-xl text-primary-dark/80">
                         {idea.description}
                       </p>
                     </div>

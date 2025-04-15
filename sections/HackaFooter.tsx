@@ -178,7 +178,9 @@ export default function HackaFooter({
           {/* Navigation Sections */}
           {sections.map((section) => (
             <div key={section.title} class="md:col-span-3">
-              <h3 class="text-lg font-medium mb-6">{section.title}</h3>
+              <h3 class="text-lg sm:text-xl font-medium mb-6">
+                {section.title}
+              </h3>
               <ul class="space-y-4">
                 {section.links.map((link) => (
                   <li key={link.text}>
