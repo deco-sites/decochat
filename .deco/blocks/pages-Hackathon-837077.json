@@ -9,7 +9,7 @@
         "title": "Build the future of AI with us",
         "description": "<p>Everyone’s talking about AI Agents and MCP servers—but can you build them?<br>Whether you’re a pro coder or brand-new to tech, join our Hackathon to automate tasks, supercharge your data, and conquer the AI wave.</p>",
         "ctaText": "Register now",
-        "ctaLink": "#register",
+        "ctaLink": "#registerTop",
         "endDate": "2025-04-25T23:00:00.000Z",
         "id": "hero",
         "badgeText": "Agents and MCP Hackathon, by deco.chat",
@@ -30,6 +30,40 @@
         "badgeIsDark": false,
         "badgeVariant": "yellow",
         "backgroundImage": "https://assets.decocache.com/decochat/13bf3020-4db9-41b2-955e-587cb3a69ba9/bg.svg"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaRegistration.tsx",
+        "title": "Secure your spot",
+        "badgeText": "Registration",
+        "buttonText": "Complete Registration",
+        "successMessage": "Registration successful! Check your email for confirmation.",
+        "errorMessage": "Something went wrong. Please try again.",
+        "experienceLevels": [
+          {
+            "value": "nube",
+            "label": "Nube",
+            "description": "I have no idea what MCPs are—just point me in the right direction!"
+          },
+          {
+            "value": "non-technical",
+            "label": "Non-Technical AI Enthusiast",
+            "description": "I'm up on the latest AI trends but have zero coding experience."
+          },
+          {
+            "value": "dev-exploring",
+            "label": "Dev Exploring AI",
+            "description": "I code for a living but want to learn how to build AI-driven solutions."
+          },
+          {
+            "value": "ai-specialist",
+            "label": "AI Specialist",
+            "description": "I've developed AI systems or integrated AI frameworks extensively."
+          }
+        ],
+        "id": "registerTop"
       }
     },
     {
@@ -97,8 +131,8 @@
       "section": {
         "__resolveType": "site/sections/HackaWhoIsItFor.tsx",
         "title": "Who is it for?",
-        "description": "We believe anyone can solve problems and automate work with AI—no heavy coding skills required! Our platform, deco.chat, features plug-and-play integrations and a conversational assistant that sets up Agents for you. If you're more experienced or just love to tinker, you'll have full access to our framework to build new MCPs, integrate unique data sources, and create complex Agents.",
         "badgeText": "Calling All Devs & Non-Devs",
+        "description": "We believe anyone can solve problems and automate work with AI—no heavy coding skills required! Our platform, deco.chat, features plug-and-play integrations and a conversational assistant that sets up Agents for you. If you're more experienced or just love to tinker, you'll have full access to our framework to build new MCPs, integrate unique data sources, and create complex Agents.",
         "id": "who-is-it-for",
         "image": "https://assets.decocache.com/decochat/d93766c0-cbe7-4a90-9fa3-11a82f948458/Exported-from-Deco-Chat-(1).gif"
       }
@@ -245,9 +279,9 @@
       "section": {
         "__resolveType": "site/sections/HackaIdeas.tsx",
         "title": "Need a spark? Try one of these:",
+        "badgeText": "Ideas",
         "description": "Or dream up your own AI solution—anything that showcases MCPs and / or Agents is fair game!",
         "id": "ideas",
-        "badgeText": "Ideas",
         "ideas": [
           {
             "title": "Personal Finance Assistant",
@@ -318,7 +352,8 @@
             "label": "AI Specialist",
             "description": "I've developed AI systems or integrated AI frameworks extensively."
           }
-        ]
+        ],
+        "id": "registerBottom"
       }
     },
     {

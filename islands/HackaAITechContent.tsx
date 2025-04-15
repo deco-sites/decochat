@@ -178,7 +178,7 @@ export default function HackaAITechContent({
             class="space-y-4"
           >
             {mcpCapabilities.map((capability) => (
-              <div class="bg-purple-light/20 rounded-2xl p-6 flex items-center gap-4">
+              <div class="bg-purple-light/20 rounded-2xl p-3 flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-purple-light flex items-center justify-center flex-shrink-0">
                   <span class="material-symbols-rounded text-2xl text-purple-dark">
                     {capability.icon}
@@ -216,7 +216,7 @@ export default function HackaAITechContent({
             class="space-y-4"
           >
             {agentCapabilities.map((capability) => (
-              <div class="bg-yellow-light/20 rounded-2xl p-6 flex items-center gap-4">
+              <div class="bg-yellow-light/20 rounded-2xl p-3 flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-yellow-light flex items-center justify-center flex-shrink-0">
                   <span class="material-symbols-rounded text-2xl text-yellow-dark">
                     {capability.icon}

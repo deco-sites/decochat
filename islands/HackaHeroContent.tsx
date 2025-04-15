@@ -2,6 +2,7 @@ import { Signal, useSignal } from "@preact/signals";
 import { useEffect } from "preact/hooks";
 import { VNode } from "preact";
 import Button from "../components/Button.tsx";
+import { JSX } from "preact";
 
 interface Props {
   endDate: string;
@@ -117,6 +118,14 @@ export default function HackaHeroContent({
           variant="outline-light"
           size="lg"
           href={ctaLink}
+          onClick={(e: MouseEvent) => {
+            e.preventDefault();
+            const targetId = ctaLink.replace("#", "");
+            const element = document.getElementById(targetId);
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
         >
           {ctaText}
         </Button>

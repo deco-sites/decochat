@@ -19,6 +19,11 @@ export interface ExperienceLevel {
 
 export interface Props {
   /**
+   * @description The section ID
+   * @default "register"
+   */
+  id?: string;
+  /**
    * @description The section title
    * @default "Register Now"
    */
@@ -56,6 +61,7 @@ export default function HackaRegistration({
     "Registration successful! Check your email for confirmation.",
   errorMessage = "Something went wrong. Please try again.",
   badgeText = "Register",
+  id = "register",
   experienceLevels = [
     {
       value: "nube",
@@ -84,7 +90,7 @@ export default function HackaRegistration({
   ],
 }: Props) {
   return (
-    <div class="w-full bg-dc-50 px-4 py-24 md:py-40">
+    <div id={id} class="w-full bg-dc-50 px-4 py-24 md:py-40">
       <div class="max-w-[1200px] flex flex-col gap-16 mx-auto">
         <div class="text-center">
           <Badge text={badgeText} variant="primary" />
