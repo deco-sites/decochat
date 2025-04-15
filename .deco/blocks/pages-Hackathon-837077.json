@@ -1,0 +1,82 @@
+{
+  "name": "Hackathon",
+  "path": "/hackathon",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaHero.tsx",
+        "title": "Build the future of AI with us",
+        "endDate": "2025-04-25T23:00:00.000Z",
+        "description": "Everyone’s talking about MCPs and AI Agents—but can you actually build them? If you’re wondering how to conquer the AI wave, join our Hackathon and create MCPs and AI Agents!",
+        "highlights": [
+          {
+            "text": "100% remote",
+            "icon": "public"
+          },
+          {
+            "text": "April 25-26",
+            "icon": "event"
+          },
+          {
+            "text": "$1,000 in prizes",
+            "icon": "attach_money"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaAbout.tsx",
+        "description": "We’re bringing developers together from around the world for a hands-on experience in building MCPs and AI Agents. This is your chance to learn the core concepts, experiment with real solutions, and take your AI skills to the next level. Plus, you’ll get mentorship from the deco team and become eligible for awesome prizes."
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaRegistration.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaAITech.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaFormat.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaPrizes.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaIdeas.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/HackaFAQ.tsx"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "Footer"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
