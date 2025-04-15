@@ -6,7 +6,7 @@ export interface Props {
   /**
    * @description The button variant
    */
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "outline-light";
   /**
    * @description The button size
    */
@@ -39,6 +39,8 @@ export default function Button({
     secondary: "bg-dc-200 text-dc-800 hover:bg-dc-300 focus:ring-dc-400",
     outline:
       "border border-primary-dark text-primary-dark hover:bg-primary-dark/10 focus:ring-primary-dark",
+    "outline-light":
+      "bg-primary-light text-primary-dark hover:bg-primary-light/90 focus:ring-primary-light",
   };
 
   const sizeClasses = {

@@ -29,7 +29,7 @@ export default function CTA({
   return (
     <div class="w-full relative z-10 px-4 md:px-20 -mb-16 md:-mb-32">
       <div class="max-w-[1500px] mx-auto">
-        <div class="w-full bg-[#CCFF00] rounded-[24px] md:rounded-[40px] px-4 md:px-6 py-16 md:py-32 flex flex-col items-center justify-center gap-6 md:gap-8 relative overflow-hidden">
+        <div class="w-full bg-primary-light rounded-2xl md:rounded-3xl px-4 md:px-6 py-16 md:py-32 flex flex-col items-center justify-center gap-6 md:gap-8 relative overflow-hidden">
           {/* Background pattern */}
           {backgroundImage && (
             <div

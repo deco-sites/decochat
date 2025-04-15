@@ -2,13 +2,13 @@
   "seo": {
     "type": "website",
     "jsonLDs": [],
-    "noIndexing": false,
-    "description": "Improve your page performance with deco.cx",
-    "titleTemplate": "%s | deco.cx",
-    "descriptionTemplate": "%s | deco.cx",
-    "title": "Start",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/40cc7da0-93d3-4215-9c2a-04b2f86b0a47",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/22c99167-0018-484f-8b0d-4295a7d771f2"
+    "noIndexing": true,
+    "description": "Become AI-first with Autonomy, Context & Governance",
+    "titleTemplate": "%s | Become AI-first with Autonomy, Context & Governance",
+    "descriptionTemplate": "%s | deco.chat",
+    "title": "deco chat",
+    "favicon": "https://assets.decocache.com/decochat/551c8422-7755-4110-a497-98f1aaaf767a/favicon-pos.svg",
+    "image": "https://assets.decocache.com/decochat/9ada49bf-b37d-42b1-968d-b17f5e86e70c/seo.jpg"
   },
   "global": [
     {
