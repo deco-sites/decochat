@@ -3,409 +3,378 @@
   "path": "/",
   "sections": [
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "loading": "eager",
-      "section": {
-        "__resolveType": "site/sections/HackaHero.tsx",
-        "title": "Build the future of AI with us",
-        "description": "<p>Everyone’s talking about AI Agents and MCP servers—but can you build them?<br>Whether you’re a pro coder or brand-new to tech, join our Hackathon to automate tasks, supercharge your data, and conquer the AI wave.</p>",
-        "ctaText": "Register now",
-        "ctaLink": "#registerTop",
-        "endDate": "2025-04-25T23:00:00.000Z",
-        "id": "hero",
-        "badgeText": "Agents and MCP Hackathon, by deco.chat",
-        "highlights": [
-          {
-            "text": "100% remote @ deco.cx/discord",
-            "icon": "public"
-          },
-          {
-            "text": "April 25-26",
-            "icon": "event"
-          },
-          {
-            "text": "Over $1,000 in prizes",
-            "icon": "attach_money"
-          }
-        ],
-        "badgeIsDark": false,
-        "badgeVariant": "yellow",
-        "backgroundImage": "https://assets.decocache.com/decochat/13bf3020-4db9-41b2-955e-587cb3a69ba9/bg.svg"
-      }
+      "__resolveType": "site/sections/HackaHero.tsx",
+      "title": "Build the future of AI with us",
+      "description": "<p>Everyone’s talking about AI Agents and MCP servers—but can you build them?<br>Whether you’re a pro coder or brand-new to tech, join our Hackathon to automate tasks, supercharge your data, and conquer the AI wave.</p>",
+      "ctaText": "Register now",
+      "ctaLink": "#registerTop",
+      "endDate": "2025-04-25T23:00:00.000Z",
+      "id": "hero",
+      "badgeText": "Agents and MCP Hackathon, by deco.chat",
+      "highlights": [
+        {
+          "text": "100% remote @ deco.cx/discord",
+          "icon": "public"
+        },
+        {
+          "text": "April 25-26",
+          "icon": "event"
+        },
+        {
+          "text": "Over $1,000 in prizes",
+          "icon": "attach_money"
+        }
+      ],
+      "badgeIsDark": false,
+      "badgeVariant": "yellow",
+      "backgroundImage": "https://assets.decocache.com/decochat/13bf3020-4db9-41b2-955e-587cb3a69ba9/bg.svg"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaRegistration.tsx",
-        "title": "Secure your spot",
-        "badgeText": "Registration",
-        "buttonText": "Complete Registration",
-        "successMessage": "Registration successful! Check your email for confirmation.",
-        "errorMessage": "Something went wrong. Please try again.",
-        "experienceLevels": [
-          {
-            "value": "nube",
-            "label": "Nube",
-            "description": "I have no idea what MCPs are—just point me in the right direction!"
-          },
-          {
-            "value": "non-technical",
-            "label": "Non-Technical AI Enthusiast",
-            "description": "I'm up on the latest AI trends but have zero coding experience."
-          },
-          {
-            "value": "dev-exploring",
-            "label": "Dev Exploring AI",
-            "description": "I code for a living but want to learn how to build AI-driven solutions."
-          },
-          {
-            "value": "ai-specialist",
-            "label": "AI Specialist",
-            "description": "I've developed AI systems or integrated AI frameworks extensively."
-          }
-        ],
-        "id": "registerTop"
-      }
+      "__resolveType": "site/sections/HackaRegistration.tsx",
+      "title": "Secure your spot",
+      "badgeText": "Registration",
+      "buttonText": "Complete Registration",
+      "successMessage": "Registration successful! Check your email for confirmation.",
+      "errorMessage": "Something went wrong. Please try again.",
+      "experienceLevels": [
+        {
+          "value": "nube",
+          "label": "Nube",
+          "description": "I have no idea what MCPs are—just point me in the right direction!"
+        },
+        {
+          "value": "non-technical",
+          "label": "Non-Technical AI Enthusiast",
+          "description": "I'm up on the latest AI trends but have zero coding experience."
+        },
+        {
+          "value": "dev-exploring",
+          "label": "Dev Exploring AI",
+          "description": "I code for a living but want to learn how to build AI-driven solutions."
+        },
+        {
+          "value": "ai-specialist",
+          "label": "AI Specialist",
+          "description": "I've developed AI systems or integrated AI frameworks extensively."
+        }
+      ],
+      "id": "registerTop"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaAITech.tsx",
-        "title": "What's this Hackathon about?",
-        "description": "We're on a mission to empower everyone, from seasoned developers to complete newcomers, to create AI solutions that understand, reason, and take action.",
-        "mcpTitle": "Why MCPs?",
-        "mcpDescription": "Model Context Protocols (MCPs) connect large language models (LLMs) to external data, tools, and APIs—massively expanding what AI can do. In essence, MCPs let your AI:",
-        "mcpIcon": "memory",
-        "agentTitle": "Why AI Agents?",
-        "agentDescription": "AI Agents combine powerful LLMs with reasoning and action-taking abilities. They can:",
-        "agentIcon": "smart_toy",
-        "mcpBadgeText": "MCPs",
-        "agentBadgeText": "AI Agents",
-        "mcpCapabilities": [
-          {
-            "variant": "purple",
-            "title": "Access real-time external data",
-            "icon": "code"
-          },
-          {
-            "variant": "purple",
-            "title": "Execute actions in outside systems",
-            "icon": "integration_instructions"
-          },
-          {
-            "variant": "purple",
-            "title": "Handle diverse content formats",
-            "icon": "format_shapes"
-          },
-          {
-            "variant": "purple",
-            "icon": "psychology",
-            "title": "Autonomously tackle complex tasks"
-          }
-        ],
-        "agentCapabilities": [
-          {
-            "variant": "purple",
-            "title": "Act as specialized assistants for any domain",
-            "icon": "support_agent"
-          },
-          {
-            "variant": "purple",
-            "title": "Automate multi-step tasks that require logic",
-            "icon": "account_tree"
-          },
-          {
-            "variant": "purple",
-            "title": "Seamlessly integrate multiple data sources and tools",
-            "icon": "tenancy"
-          },
-          {
-            "variant": "purple",
-            "title": "Continuously learn and improve",
-            "icon": "trending_up"
-          }
-        ]
-      }
+      "__resolveType": "site/sections/HackaAITech.tsx",
+      "title": "What's this Hackathon about?",
+      "description": "We're on a mission to empower everyone, from seasoned developers to complete newcomers, to create AI solutions that understand, reason, and take action.",
+      "mcpTitle": "Why MCPs?",
+      "mcpDescription": "Model Context Protocols (MCPs) connect large language models (LLMs) to external data, tools, and APIs—massively expanding what AI can do. In essence, MCPs let your AI:",
+      "mcpIcon": "memory",
+      "agentTitle": "Why AI Agents?",
+      "agentDescription": "AI Agents combine powerful LLMs with reasoning and action-taking abilities. They can:",
+      "agentIcon": "smart_toy",
+      "mcpBadgeText": "MCPs",
+      "agentBadgeText": "AI Agents",
+      "mcpCapabilities": [
+        {
+          "variant": "purple",
+          "title": "Access real-time external data",
+          "icon": "code"
+        },
+        {
+          "variant": "purple",
+          "title": "Execute actions in outside systems",
+          "icon": "integration_instructions"
+        },
+        {
+          "variant": "purple",
+          "title": "Handle diverse content formats",
+          "icon": "format_shapes"
+        },
+        {
+          "variant": "purple",
+          "icon": "psychology",
+          "title": "Autonomously tackle complex tasks"
+        }
+      ],
+      "agentCapabilities": [
+        {
+          "variant": "purple",
+          "title": "Act as specialized assistants for any domain",
+          "icon": "support_agent"
+        },
+        {
+          "variant": "purple",
+          "title": "Automate multi-step tasks that require logic",
+          "icon": "account_tree"
+        },
+        {
+          "variant": "purple",
+          "title": "Seamlessly integrate multiple data sources and tools",
+          "icon": "tenancy"
+        },
+        {
+          "variant": "purple",
+          "title": "Continuously learn and improve",
+          "icon": "trending_up"
+        }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaWhoIsItFor.tsx",
-        "title": "Who is it for?",
-        "badgeText": "Calling All Devs & Non-Devs",
-        "description": "We believe anyone can solve problems and automate work with AI—no heavy coding skills required! Our platform, deco.chat, features plug-and-play integrations and a conversational assistant that sets up Agents for you. If you're more experienced or just love to tinker, you'll have full access to our framework to build new MCPs, integrate unique data sources, and create complex Agents.",
-        "id": "who-is-it-for",
-        "image": "https://assets.decocache.com/decochat/d93766c0-cbe7-4a90-9fa3-11a82f948458/Exported-from-Deco-Chat-(1).gif"
-      }
+      "__resolveType": "site/sections/HackaWhoIsItFor.tsx",
+      "title": "Who is it for?",
+      "badgeText": "Calling All Devs & Non-Devs",
+      "description": "We believe anyone can solve problems and automate work with AI—no heavy coding skills required! Our platform, deco.chat, features plug-and-play integrations and a conversational assistant that sets up Agents for you. If you're more experienced or just love to tinker, you'll have full access to our framework to build new MCPs, integrate unique data sources, and create complex Agents.",
+      "id": "who-is-it-for",
+      "image": "https://assets.decocache.com/decochat/d93766c0-cbe7-4a90-9fa3-11a82f948458/Exported-from-Deco-Chat-(1).gif"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaFormat.tsx",
-        "title": "Event Format",
-        "description": "We're bringing AI enthusiasts together from around the world for a 100% remote experience. Work at your own pace, whether you're collaborating with a global team or going solo. Submit your project asynchronously before the final deadline, and you'll be in the running for prizes.",
-        "id": "format",
-        "badgeText": "Event Details",
-        "highlights": [
-          {
-            "title": "Technical Introduction & Mentorship",
-            "info": "April 25, starting 1:00pm UTC",
-            "icon": "schedule"
-          },
-          {
-            "title": "Submission Deadline",
-            "info": "April 26, 3:00pm UTC",
-            "icon": "task_alt"
-          },
-          {
-            "title": "Winner Announcements",
-            "info": "April 26, 7:00pm UTC (on our Discord, recording available)",
-            "icon": "emoji_events"
-          },
-          {
-            "title": "Where",
-            "info": "deco.cx/discord",
-            "icon": "chat"
-          },
-          {
-            "title": "Prizes",
-            "info": "Over $1,000 in credits and more",
-            "icon": "redeem"
-          }
-        ],
-        "supportItems": [
-          {
-            "title": "Office Hours",
-            "description": "Drop into our AI channel for extra help (schedule TBA)",
-            "icon": "support_agent"
-          },
-          {
-            "title": "Async Feedback",
-            "description": "Post questions anytime—mentors will respond ASAP",
-            "icon": "forum"
-          },
-          {
-            "title": "Official Results",
-            "description": "Winners announced live, with replays if you miss it",
-            "icon": "celebration"
-          }
-        ],
-        "timelineEvents": [
-          {
-            "date": "April 25",
-            "title": "Hackathon Officially Opens",
-            "items": [
-              "Join our Discord and explore the Deco platform",
-              "(Time TBA): Intro to MCPs & AI Agents (theory + practical demos), also accessible async",
-              "(Time TBA): Demo of the Deco platform (tour of Deco.chat & Deco.host), with technical and non-technical resources",
-              "Start brainstorming and building! Work solo or in teams and ask mentors for feedback and join Office Hours"
-            ]
-          },
-          {
-            "date": "April 26",
-            "title": "Demo Submission and Results Announcement",
-            "items": [
-              "Record a short demo video of your solution (submission details at the event)",
-              "Winners revealed",
-              "Prizes awarded"
-            ]
-          }
-        ]
-      }
+      "__resolveType": "site/sections/HackaFormat.tsx",
+      "title": "Event Format",
+      "description": "We're bringing AI enthusiasts together from around the world for a 100% remote experience. Work at your own pace, whether you're collaborating with a global team or going solo. Submit your project asynchronously before the final deadline, and you'll be in the running for prizes.",
+      "id": "format",
+      "badgeText": "Event Details",
+      "highlights": [
+        {
+          "title": "Technical Introduction & Mentorship",
+          "info": "April 25, starting 1:00pm UTC",
+          "icon": "schedule"
+        },
+        {
+          "title": "Submission Deadline",
+          "info": "April 26, 3:00pm UTC",
+          "icon": "task_alt"
+        },
+        {
+          "title": "Winner Announcements",
+          "info": "April 26, 7:00pm UTC (on our Discord, recording available)",
+          "icon": "emoji_events"
+        },
+        {
+          "title": "Where",
+          "info": "deco.cx/discord",
+          "icon": "chat"
+        },
+        {
+          "title": "Prizes",
+          "info": "Over $1,000 in credits and more",
+          "icon": "redeem"
+        }
+      ],
+      "supportItems": [
+        {
+          "title": "Office Hours",
+          "description": "Drop into our AI channel for extra help (schedule TBA)",
+          "icon": "support_agent"
+        },
+        {
+          "title": "Async Feedback",
+          "description": "Post questions anytime—mentors will respond ASAP",
+          "icon": "forum"
+        },
+        {
+          "title": "Official Results",
+          "description": "Winners announced live, with replays if you miss it",
+          "icon": "celebration"
+        }
+      ],
+      "timelineEvents": [
+        {
+          "date": "April 25",
+          "title": "Hackathon Officially Opens",
+          "items": [
+            "Join our Discord and explore the Deco platform",
+            "(Time TBA): Intro to MCPs & AI Agents (theory + practical demos), also accessible async",
+            "(Time TBA): Demo of the Deco platform (tour of Deco.chat & Deco.host), with technical and non-technical resources",
+            "Start brainstorming and building! Work solo or in teams and ask mentors for feedback and join Office Hours"
+          ]
+        },
+        {
+          "date": "April 26",
+          "title": "Demo Submission and Results Announcement",
+          "items": [
+            "Record a short demo video of your solution (submission details at the event)",
+            "Winners revealed",
+            "Prizes awarded"
+          ]
+        }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaPrizes.tsx",
-        "title": "Prizes & Recognition",
-        "description": "Your chance to win money, credits, premium access, and a spot in Deco's Agent Catalog.",
-        "id": "prizes",
-        "badgeText": "Prizes",
-        "prizes": [
-          {
-            "position": "1st Place",
-            "variant": "gold",
-            "items": [
-              {
-                "text": "$1,000 in credits on our platform",
-                "icon": "redeem"
-              },
-              {
-                "text": "4 premium seats for 6 months",
-                "icon": "workspace_premium"
-              },
-              {
-                "text": "Featured placement in the Deco Agent Catalog",
-                "icon": "star"
-              }
-            ]
-          },
-          {
-            "position": "2nd Place",
-            "variant": "silver",
-            "items": [
-              {
-                "text": "$500 in credits on our platform",
-                "icon": "redeem"
-              },
-              {
-                "text": "2 premium seats for 6 months",
-                "icon": "workspace_premium"
-              },
-              {
-                "text": "Inclusion in the Deco Agent Catalog",
-                "icon": "star"
-              }
-            ]
-          },
-          {
-            "position": "3rd Place",
-            "variant": "bronze",
-            "items": [
-              {
-                "text": "$250 in credits on our platform",
-                "icon": "redeem"
-              },
-              {
-                "text": "1 premium seat for 3 months",
-                "icon": "workspace_premium"
-              }
-            ]
-          }
-        ]
-      }
+      "__resolveType": "site/sections/HackaPrizes.tsx",
+      "title": "Prizes & Recognition",
+      "description": "Your chance to win money, credits, premium access, and a spot in Deco's Agent Catalog.",
+      "id": "prizes",
+      "badgeText": "Prizes",
+      "prizes": [
+        {
+          "position": "1st Place",
+          "variant": "gold",
+          "items": [
+            {
+              "text": "$1,000 in credits on our platform",
+              "icon": "redeem"
+            },
+            {
+              "text": "4 premium seats for 6 months",
+              "icon": "workspace_premium"
+            },
+            {
+              "text": "Featured placement in the Deco Agent Catalog",
+              "icon": "star"
+            }
+          ]
+        },
+        {
+          "position": "2nd Place",
+          "variant": "silver",
+          "items": [
+            {
+              "text": "$500 in credits on our platform",
+              "icon": "redeem"
+            },
+            {
+              "text": "2 premium seats for 6 months",
+              "icon": "workspace_premium"
+            },
+            {
+              "text": "Inclusion in the Deco Agent Catalog",
+              "icon": "star"
+            }
+          ]
+        },
+        {
+          "position": "3rd Place",
+          "variant": "bronze",
+          "items": [
+            {
+              "text": "$250 in credits on our platform",
+              "icon": "redeem"
+            },
+            {
+              "text": "1 premium seat for 3 months",
+              "icon": "workspace_premium"
+            }
+          ]
+        }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaIdeas.tsx",
-        "title": "Need a spark? Try one of these:",
-        "badgeText": "Ideas",
-        "description": "Or dream up your own AI solution—anything that showcases MCPs and / or Agents is fair game!",
-        "id": "ideas",
-        "ideas": [
-          {
-            "title": "Personal Finance Assistant",
-            "description": "Automates spending analysis and savings tips",
-            "icon": "account_balance",
-            "variant": "primary"
-          },
-          {
-            "title": "Content Research Agent",
-            "description": "Gathers and summarizes data from multiple sources",
-            "icon": "search",
-            "variant": "purple"
-          },
-          {
-            "title": "Code Review Assistant",
-            "description": "Spots bugs, suggests optimizations",
-            "icon": "code",
-            "variant": "yellow"
-          },
-          {
-            "title": "Health Monitoring Agent",
-            "description": "Tracks metrics, identifies trends, offers personalized advice",
-            "icon": "monitor_heart",
-            "variant": "primary"
-          }
-        ],
-        "examples": [
-          {
-            "title": "MCP Servers",
-            "image1": "https://assets.decocache.com/decochat/3894c6f6-0274-4122-8139-65ff14dcc4a9/mcps-example.png",
-            "image2": ""
-          },
-          {
-            "title": "AI Agents",
-            "image1": "https://assets.decocache.com/decochat/ae410b3d-b5bc-4d90-806c-3a96bd26a64d/agents-examples.png",
-            "image2": ""
-          }
-        ]
-      }
+      "__resolveType": "site/sections/HackaIdeas.tsx",
+      "title": "Need a spark? Try one of these:",
+      "badgeText": "Ideas",
+      "description": "Or dream up your own AI solution—anything that showcases MCPs and / or Agents is fair game!",
+      "id": "ideas",
+      "ideas": [
+        {
+          "title": "Personal Finance Assistant",
+          "description": "Automates spending analysis and savings tips",
+          "icon": "account_balance",
+          "variant": "primary"
+        },
+        {
+          "title": "Content Research Agent",
+          "description": "Gathers and summarizes data from multiple sources",
+          "icon": "search",
+          "variant": "purple"
+        },
+        {
+          "title": "Code Review Assistant",
+          "description": "Spots bugs, suggests optimizations",
+          "icon": "code",
+          "variant": "yellow"
+        },
+        {
+          "title": "Health Monitoring Agent",
+          "description": "Tracks metrics, identifies trends, offers personalized advice",
+          "icon": "monitor_heart",
+          "variant": "primary"
+        }
+      ],
+      "examples": [
+        {
+          "title": "MCP Servers",
+          "image1": "https://assets.decocache.com/decochat/3894c6f6-0274-4122-8139-65ff14dcc4a9/mcps-example.png",
+          "image2": ""
+        },
+        {
+          "title": "AI Agents",
+          "image1": "https://assets.decocache.com/decochat/ae410b3d-b5bc-4d90-806c-3a96bd26a64d/agents-examples.png",
+          "image2": ""
+        }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaRegistration.tsx",
-        "title": "Secure your spot",
-        "badgeText": "Registration",
-        "buttonText": "Complete Registration",
-        "successMessage": "Registration successful! Check your email for confirmation.",
-        "errorMessage": "Something went wrong. Please try again.",
-        "experienceLevels": [
-          {
-            "value": "nube",
-            "label": "Nube",
-            "description": "I have no idea what MCPs are—just point me in the right direction!"
-          },
-          {
-            "value": "non-technical",
-            "label": "Non-Technical AI Enthusiast",
-            "description": "I'm up on the latest AI trends but have zero coding experience."
-          },
-          {
-            "value": "dev-exploring",
-            "label": "Dev Exploring AI",
-            "description": "I code for a living but want to learn how to build AI-driven solutions."
-          },
-          {
-            "value": "ai-specialist",
-            "label": "AI Specialist",
-            "description": "I've developed AI systems or integrated AI frameworks extensively."
-          }
-        ],
-        "id": "registerBottom"
-      }
+      "__resolveType": "site/sections/HackaRegistration.tsx",
+      "title": "Secure your spot",
+      "badgeText": "Registration",
+      "buttonText": "Complete Registration",
+      "successMessage": "Registration successful! Check your email for confirmation.",
+      "errorMessage": "Something went wrong. Please try again.",
+      "experienceLevels": [
+        {
+          "value": "nube",
+          "label": "Nube",
+          "description": "I have no idea what MCPs are—just point me in the right direction!"
+        },
+        {
+          "value": "non-technical",
+          "label": "Non-Technical AI Enthusiast",
+          "description": "I'm up on the latest AI trends but have zero coding experience."
+        },
+        {
+          "value": "dev-exploring",
+          "label": "Dev Exploring AI",
+          "description": "I code for a living but want to learn how to build AI-driven solutions."
+        },
+        {
+          "value": "ai-specialist",
+          "label": "AI Specialist",
+          "description": "I've developed AI systems or integrated AI frameworks extensively."
+        }
+      ],
+      "id": "registerBottom"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/HackaFAQ.tsx",
-        "title": "Frequently Asked Questions",
-        "badgeText": "FAQ",
-        "description": "Have questions about the hackathon? Find answers to common queries below. Still have questions? Join our Discord or email hackathon@deco.cx.",
-        "id": "faq",
-        "faqs": [
-          {
-            "question": "Do I need prior AI experience?",
-            "answer": "Not at all—this Hackathon has everything you need to get started."
-          },
-          {
-            "question": "Is there a cost?",
-            "answer": "Nope! It’s totally free."
-          },
-          {
-            "question": "Can I join alone or must I form a team?",
-            "answer": "You can fly solo or team up—whichever you prefer."
-          },
-          {
-            "question": "What exactly are MCPs and AI Agents?",
-            "answer": "They’re frameworks that let you build advanced, context-aware AI solutions (see details above)."
-          },
-          {
-            "question": "How will I get support?",
-            "answer": "We have scheduled Office Hours plus mentors on Discord for questions."
-          },
-          {
-            "question": "Which programming languages can I use?",
-            "answer": "JavaScript or TypeScript are ideal, but any language calling MCP APIs works."
-          },
-          {
-            "question": "What happens to projects after the Hackathon?",
-            "answer": "They remain yours. We encourage you to keep building and even showcase them in our Agent Catalog."
-          },
-          {
-            "question": "Do I need a powerful computer?",
-            "answer": "A normal setup is fine. The heavy lifting happens in the cloud."
-          }
-        ]
-      }
+      "__resolveType": "site/sections/HackaFAQ.tsx",
+      "title": "Frequently Asked Questions",
+      "badgeText": "FAQ",
+      "description": "Have questions about the hackathon? Find answers to common queries below. Still have questions? Join our Discord or email hackathon@deco.cx.",
+      "id": "faq",
+      "faqs": [
+        {
+          "question": "Do I need prior AI experience?",
+          "answer": "Not at all—this Hackathon has everything you need to get started."
+        },
+        {
+          "question": "Is there a cost?",
+          "answer": "Nope! It’s totally free."
+        },
+        {
+          "question": "Can I join alone or must I form a team?",
+          "answer": "You can fly solo or team up—whichever you prefer."
+        },
+        {
+          "question": "What exactly are MCPs and AI Agents?",
+          "answer": "They’re frameworks that let you build advanced, context-aware AI solutions (see details above)."
+        },
+        {
+          "question": "How will I get support?",
+          "answer": "We have scheduled Office Hours plus mentors on Discord for questions."
+        },
+        {
+          "question": "Which programming languages can I use?",
+          "answer": "JavaScript or TypeScript are ideal, but any language calling MCP APIs works."
+        },
+        {
+          "question": "What happens to projects after the Hackathon?",
+          "answer": "They remain yours. We encourage you to keep building and even showcase them in our Agent Catalog."
+        },
+        {
+          "question": "Do I need a powerful computer?",
+          "answer": "A normal setup is fine. The heavy lifting happens in the cloud."
+        }
+      ]
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "Footer"
-      }
+      "__resolveType": "Footer"
     }
   ],
   "seo": {
