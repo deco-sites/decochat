@@ -2496,6 +2496,9 @@ html {
 .h-12 {
   height: 3rem;
 }
+.h-14 {
+  height: 3.5rem;
+}
 .h-16 {
   height: 4rem;
 }
@@ -2580,6 +2583,9 @@ html {
 .w-12 {
   width: 3rem;
 }
+.w-14 {
+  width: 3.5rem;
+}
 .w-16 {
   width: 4rem;
 }
@@ -2625,9 +2631,6 @@ html {
 }
 .max-w-3xl {
   max-width: 48rem;
-}
-.max-w-4xl {
-  max-width: 56rem;
 }
 .max-w-5xl {
   max-width: 64rem;
@@ -2992,6 +2995,9 @@ html {
 }
 .bg-white\/50 {
   background-color: rgb(255 255 255 / 0.5);
+}
+.bg-white\/80 {
+  background-color: rgb(255 255 255 / 0.8);
 }
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
@@ -3661,6 +3667,11 @@ html {
     border-radius: 9999px;
   }
 
+  .sm\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3748,10 +3759,6 @@ html {
     height: 3rem;
   }
 
-  .md\:h-14 {
-    height: 3.5rem;
-  }
-
   .md\:h-16 {
     height: 4rem;
   }
@@ -3800,10 +3807,6 @@ html {
     width: 3rem;
   }
 
-  .md\:w-14 {
-    width: 3.5rem;
-  }
-
   .md\:w-16 {
     width: 4rem;
   }
@@ -3838,6 +3841,10 @@ html {
 
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 
   .md\:gap-12 {
@@ -3961,6 +3968,11 @@ html {
     line-height: 2.25rem;
   }
 
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -4013,9 +4025,21 @@ html {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .lg\:text-8xl {
     font-size: 6rem;
     line-height: 1;
+  }
+}
+@media (min-width: 1280px) {
+
+  .xl\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 .htmx-request .\[\.htmx-request_\&\]\:inline {

@@ -204,64 +204,35 @@ export default function HackaIdeas({
           </div>
 
           {/* Ideas Grid */}
-          <div class="max-w-4xl mx-auto">
+          <div class="max-w-5xl mx-auto">
             <div
               ref={ideasRef}
-              class="grid grid-cols-1 md:grid-cols-2 gap-8"
+              class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10"
             >
               {ideas.map((idea) => {
                 const style = variantStyles[idea.variant];
                 return (
-                  <div class="flex items-start gap-4 md:gap-6 group bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-primary-dark/10">
+                  <div class="flex items-start gap-4 md:gap-6 group bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-primary-dark/10 hover:shadow-lg transition-all duration-300">
                     <div
-                      class={`w-12 md:w-14 h-12 md:h-14 rounded-xl ${style.accent} flex items-center justify-center flex-shrink-0`}
+                      class={`w-14 md:w-16 h-14 md:h-16 rounded-xl ${style.accent} flex items-center justify-center flex-shrink-0`}
                     >
                       <span
-                        class={`material-symbols-rounded text-2xl md:text-3xl ${style.icon}`}
+                        class={`material-symbols-rounded text-3xl md:text-4xl ${style.icon}`}
                       >
                         {idea.icon}
                       </span>
                     </div>
                     <div>
-                      <h3 class="text-lg md:text-xl font-medium text-primary-dark group-hover:text-primary transition-colors duration-300 mb-2">
+                      <h3 class="text-xl md:text-2xl font-medium text-primary-dark group-hover:text-primary transition-colors duration-300 mb-3">
                         {idea.title}
                       </h3>
-                      <p class="text-lg sm:text-xl text-primary-dark/80">
+                      <p class="text-lg md:text-xl text-primary-dark/80">
                         {idea.description}
                       </p>
                     </div>
                   </div>
                 );
               })}
-            </div>
-          </div>
-        </div>
-
-        {/* Examples Section */}
-        <div class="bg-primary-dark rounded-3xl p-6 md:p-12">
-          <div class="text-center mb-8 md:mb-12">
-            <p class="text-lg md:text-xl text-primary-light/80">
-              {description}
-            </p>
-          </div>
-
-          <div class="max-w-5xl mx-auto px-4 md:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-              {examples.map((example) => (
-                <div>
-                  <h4 class="text-xl font-medium text-primary-light mb-8 text-center">
-                    {example.title}
-                  </h4>
-                  {example.image1 && (
-                    <img
-                      src={example.image1}
-                      alt={example.title}
-                      class="w-full rounded-xl"
-                      loading="lazy"
-                    />
-                  )}
-                </div>
-              ))}
             </div>
           </div>
         </div>

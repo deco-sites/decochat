@@ -18,7 +18,7 @@ export interface Props {
   /**
    * @description Optional click handler
    */
-  onClick?: () => void;
+  onClick?: (e: MouseEvent) => void;
 }
 
 export default function Button({
