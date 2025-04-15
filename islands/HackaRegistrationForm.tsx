@@ -2,6 +2,9 @@ import { useSignal } from "@preact/signals";
 import Button from "../components/Button.tsx";
 import type { ExperienceLevel } from "../sections/HackaRegistration.tsx";
 import { useEffect, useRef, useState } from "preact/hooks";
+import ReCAPTCHA from "site/sections/ReCAPTCHA.tsx";
+export const RECAPTCHA_SITE_KEY = "6Le4oRkrAAAAAE510NaLMMvSoctvTpGKZKeo9h-x";
+import { invoke } from "site/runtime.ts";
 
 interface Props {
   buttonText: string;
@@ -51,7 +54,7 @@ export default function HackaRegistrationForm({
     }
   }, []);
 
-  const handleSubmit = async (e: Event) => {
+  const handleSubmit = async (e: Event, token: string) => {
     e.preventDefault();
 
     if (isSubmitting.value) return;
@@ -66,7 +69,12 @@ export default function HackaRegistrationForm({
 
     try {
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const props = {
+        recaptcha: token,
+        data: JSON.stringify(formData.value),
+      };
+
+      await invoke.site.actions.submit(props);
 
       // Reset form and show success message
       formData.value = {
@@ -77,7 +85,8 @@ export default function HackaRegistrationForm({
         agreeToTerms: false,
       };
       isSuccess.value = true;
-    } catch (error) {
+    } catch (_error) {
+      console.log(_error);
       isError.value = true;
     } finally {
       isSubmitting.value = false;
@@ -92,6 +101,8 @@ export default function HackaRegistrationForm({
       [input.name]: value,
     };
   };
+
+  const FORM_ID = "contact-form";
 
   return (
     <div class="w-full max-w-xl mx-auto">
@@ -143,9 +154,10 @@ export default function HackaRegistrationForm({
           </div>
         )
         : (
+          <>
           <form
             class="w-full"
-            onSubmit={handleSubmit}
+            id={FORM_ID}
           >
             <div class="space-y-6">
               <div>
@@ -288,10 +300,18 @@ export default function HackaRegistrationForm({
                     : errorMessage}
                 </div>
               )}
-
               <button
                 class="w-full"
                 disabled={isSubmitting.value}
+                onClick={(e) => {
+                  e.preventDefault();
+                  (globalThis as any).grecaptcha.enterprise.ready(function() {
+                    (globalThis as any).grecaptcha.enterprise.execute(`${RECAPTCHA_SITE_KEY}`, {action: 'submit'}).then(function(token) {
+                      handleSubmit(e, token);
+                    });
+                  });
+                }
+              }
               >
                 <Button
                   variant="primary"
@@ -302,6 +322,8 @@ export default function HackaRegistrationForm({
               </button>
             </div>
           </form>
+          <ReCAPTCHA formId={FORM_ID} />
+          </>
         )}
     </div>
   );
