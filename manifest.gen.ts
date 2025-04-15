@@ -2,6 +2,7 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/submit.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$$$$0 from "./sections/CTA.tsx";
@@ -49,6 +50,9 @@ const manifest = {
     "site/sections/ItWorks.tsx": $$$$$$18,
     "site/sections/ReCAPTCHA.tsx": $$$$$$19,
     "site/sections/Theme/Theme.tsx": $$$$$$20,
+  },
+  "actions": {
+    "site/actions/submit.ts": $$$$$$$$$0,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,
