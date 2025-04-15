@@ -9,6 +9,7 @@ import * as $CTAIsland from "./islands/CTAIsland.tsx";
 import * as $Features from "./islands/Features.tsx";
 import * as $HackaAITechContent from "./islands/HackaAITechContent.tsx";
 import * as $HackaFAQAccordion from "./islands/HackaFAQAccordion.tsx";
+import * as $HackaFAQChat from "./islands/HackaFAQChat.tsx";
 import * as $HackaHeroContent from "./islands/HackaHeroContent.tsx";
 import * as $HackaInteractive from "./islands/HackaInteractive.tsx";
 import * as $HackaRegistrationForm from "./islands/HackaRegistrationForm.tsx";
@@ -25,6 +26,7 @@ const manifest = {
     "./islands/Features.tsx": $Features,
     "./islands/HackaAITechContent.tsx": $HackaAITechContent,
     "./islands/HackaFAQAccordion.tsx": $HackaFAQAccordion,
+    "./islands/HackaFAQChat.tsx": $HackaFAQChat,
     "./islands/HackaHeroContent.tsx": $HackaHeroContent,
     "./islands/HackaInteractive.tsx": $HackaInteractive,
     "./islands/HackaRegistrationForm.tsx": $HackaRegistrationForm,

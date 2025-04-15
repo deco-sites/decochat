@@ -34,7 +34,7 @@ export default function HackaFAQAccordion({ faqs }: Props) {
             aria-expanded={openIndex.value === index}
           >
             <div class="flex items-center gap-4">
-              <span class="material-icons text-2xl text-dc-100">
+              <span class="material-symbols-rounded text-2xl text-dc-100">
                 {faq.icon}
               </span>
               <span class="text-xl text-dc-50 font-medium">
@@ -42,7 +42,7 @@ export default function HackaFAQAccordion({ faqs }: Props) {
               </span>
             </div>
             <span
-              class={`material-icons text-2xl text-dc-100 transition-transform duration-300 ${
+              class={`material-symbols-rounded text-2xl text-dc-100 transition-transform duration-300 ${
                 openIndex.value === index ? "rotate-180" : ""
               }`}
             >

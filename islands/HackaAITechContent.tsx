@@ -6,15 +6,31 @@ import type { TechCapability } from "../sections/HackaAITech.tsx";
 interface Props {
   title: string;
   description: string;
+  mcpTitle: string;
+  mcpDescription: string;
+  mcpIcon: string;
+  agentTitle: string;
+  agentDescription: string;
+  agentIcon: string;
   mcpCapabilities: TechCapability[];
   agentCapabilities: TechCapability[];
+  mcpBadgeText: string;
+  agentBadgeText: string;
 }
 
 export default function HackaAITechContent({
   title,
   description,
+  mcpTitle,
+  mcpDescription,
+  mcpIcon,
+  agentTitle,
+  agentDescription,
+  agentIcon,
   mcpCapabilities,
   agentCapabilities,
+  mcpBadgeText,
+  agentBadgeText,
 }: Props) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -133,8 +149,8 @@ export default function HackaAITechContent({
         class="text-center mb-16 md:mb-24"
       >
         <div class="flex items-center justify-center gap-4">
-          <Badge text="MCPs" variant="purple" />
-          <Badge text="AI Agents" variant="yellow" />
+          <Badge text={mcpBadgeText} variant="purple" />
+          <Badge text={agentBadgeText} variant="yellow" />
         </div>
         <h2 class="text-3xl md:text-5xl text-dc-900 font-medium mt-6 mb-8">
           {title}
@@ -144,12 +160,19 @@ export default function HackaAITechContent({
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24 mb-16">
-        <div class="bg-white rounded-3xl p-8 shadow-sm">
-          <h3 class="text-2xl text-dc-900 font-medium mb-8 flex items-center gap-3">
-            <span class="material-icons text-purple-dark">architecture</span>
-            Model Context Protocols
-          </h3>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+        <div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col">
+          <div class="min-h-[140px] mb-3">
+            <h3 class="text-2xl text-dc-900 font-medium mb-4 flex items-center gap-3">
+              <span class="material-symbols-rounded text-purple-dark">
+                {mcpIcon}
+              </span>
+              {mcpTitle}
+            </h3>
+            <p class="text-dc-700 text-lg">
+              {mcpDescription}
+            </p>
+          </div>
           <div
             ref={mcpRef}
             class="space-y-4"
@@ -157,23 +180,37 @@ export default function HackaAITechContent({
             {mcpCapabilities.map((capability) => (
               <div class="bg-purple-light/20 rounded-2xl p-6 flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-purple-light flex items-center justify-center flex-shrink-0">
-                  <span class="material-icons text-2xl text-purple-dark">
+                  <span class="material-symbols-rounded text-2xl text-purple-dark">
                     {capability.icon}
                   </span>
                 </div>
-                <h4 class="text-xl text-dc-900 font-medium">
-                  {capability.title}
-                </h4>
+                <div>
+                  <h4 class="text-xl text-dc-900 font-medium">
+                    {capability.title}
+                  </h4>
+                  {capability.description && (
+                    <p class="text-dc-700 mt-1">
+                      {capability.description}
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div class="bg-white rounded-3xl p-8 shadow-sm">
-          <h3 class="text-2xl text-dc-900 font-medium mb-8 flex items-center gap-3">
-            <span class="material-icons text-yellow-dark">smart_toy</span>
-            AI Agents
-          </h3>
+        <div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col">
+          <div class="min-h-[140px] mb-3">
+            <h3 class="text-2xl text-dc-900 font-medium mb-4 flex items-center gap-3">
+              <span class="material-symbols-rounded text-yellow-dark">
+                {agentIcon}
+              </span>
+              {agentTitle}
+            </h3>
+            <p class="text-dc-700 text-lg">
+              {agentDescription}
+            </p>
+          </div>
           <div
             ref={agentRef}
             class="space-y-4"
@@ -181,28 +218,24 @@ export default function HackaAITechContent({
             {agentCapabilities.map((capability) => (
               <div class="bg-yellow-light/20 rounded-2xl p-6 flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-yellow-light flex items-center justify-center flex-shrink-0">
-                  <span class="material-icons text-2xl text-yellow-dark">
+                  <span class="material-symbols-rounded text-2xl text-yellow-dark">
                     {capability.icon}
                   </span>
                 </div>
-                <h4 class="text-xl text-dc-900 font-medium">
-                  {capability.title}
-                </h4>
+                <div>
+                  <h4 class="text-xl text-dc-900 font-medium">
+                    {capability.title}
+                  </h4>
+                  {capability.description && (
+                    <p class="text-dc-700 mt-1">
+                      {capability.description}
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
-
-      <div class="relative">
-        <div class="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-yellow-400 rounded-2xl blur opacity-30">
-        </div>
-        <pre
-          ref={codeRef}
-          class="relative w-full h-full bg-[#1a1b26] rounded-2xl p-6 font-mono text-sm md:text-base leading-relaxed text-gray-100 overflow-x-auto"
-        >
-          <code>{codeExample}</code>
-        </pre>
       </div>
     </div>
   );

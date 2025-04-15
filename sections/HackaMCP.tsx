@@ -171,7 +171,7 @@ export default function HackaMCP({
             {capabilities.map((capability) => (
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-xl bg-purple-light flex items-center justify-center flex-shrink-0">
-                  <span class="material-icons text-2xl text-purple-dark">
+                  <span class="material-symbols-rounded text-2xl text-purple-dark">
                     {capability.icon}
                   </span>
                 </div>
@@ -201,7 +201,7 @@ export default function HackaMCP({
               )
               : (
                 <div class="w-full aspect-[4/3] max-w-lg bg-purple-light rounded-2xl shadow-lg flex items-center justify-center">
-                  <span class="material-icons text-6xl text-purple-dark">
+                  <span class="material-symbols-rounded text-6xl text-purple-dark">
                     architecture
                   </span>
                 </div>

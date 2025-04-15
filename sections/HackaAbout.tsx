@@ -21,6 +21,7 @@ export interface Props {
    */
   title?: string;
   /**
+   * @format rich-text
    * @description The section description
    */
   description?: string;
@@ -33,6 +34,11 @@ export interface Props {
    * @default "about"
    */
   id?: string;
+  /**
+   * @description The badge text
+   * @default "About"
+   */
+  badgeText?: string;
 }
 
 export default function HackaAbout({
@@ -64,6 +70,7 @@ export default function HackaAbout({
     },
   ],
   id = "about",
+  badgeText = "About",
 }: Props) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -124,12 +131,17 @@ export default function HackaAbout({
       <div class="max-w-[1440px] mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
           <div ref={contentRef} class="max-w-xl">
-            <Badge text="About" variant="primary" />
+            <Badge text={badgeText} variant="primary" />
             <h2 class="text-3xl md:text-5xl text-primary-dark font-medium mt-6 mb-8">
               {title}
             </h2>
-            <p class="text-lg md:text-xl text-dc-700">
-              {description}
+            <p
+              class="text-lg md:text-xl text-dc-700"
+              dangerouslySetInnerHTML={{
+                __html:
+                  `<div class="space-y-0 text-lg md:text-xl text-dc-700 md:leading-[1.5]">${description}</div>`,
+              }}
+            >
             </p>
           </div>
 
@@ -141,7 +153,7 @@ export default function HackaAbout({
               {highlights.map((highlight) => (
                 <div class="bg-white rounded-2xl p-6 flex items-center gap-4 shadow-sm">
                   <div class="w-12 h-12 rounded-xl bg-dc-100 flex items-center justify-center flex-shrink-0">
-                    <span class="material-icons text-2xl text-dc-700">
+                    <span class="material-symbols-rounded text-2xl text-dc-700">
                       {highlight.icon}
                     </span>
                   </div>

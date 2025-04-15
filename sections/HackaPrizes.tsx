@@ -48,6 +48,11 @@ export interface Props {
    * @default "prizes"
    */
   id?: string;
+  /**
+   * @description The badge text
+   * @default "Prizes"
+   */
+  badgeText?: string;
 }
 
 export default function HackaPrizes({
@@ -58,18 +63,16 @@ export default function HackaPrizes({
     {
       position: "1st Place",
       items: [
-        { text: "$1,000", icon: "payments" },
-        { text: "$1,000 worth of deco credits", icon: "redeem" },
-        { text: "2 premium seats for 6 months", icon: "workspace_premium" },
+        { text: "$1,000 in credits on our platform", icon: "redeem" },
+        { text: "4 premium seats for 6 months", icon: "workspace_premium" },
         { text: "Featured placement in the Deco Agent Catalog", icon: "star" },
-        { text: "Surprise bonus", icon: "card_giftcard" },
       ],
       variant: "gold",
     },
     {
       position: "2nd Place",
       items: [
-        { text: "$500 worth of deco credits", icon: "redeem" },
+        { text: "$500 in credits on our platform", icon: "redeem" },
         { text: "2 premium seats for 6 months", icon: "workspace_premium" },
         { text: "Inclusion in the Deco Agent Catalog", icon: "star" },
       ],
@@ -78,14 +81,14 @@ export default function HackaPrizes({
     {
       position: "3rd Place",
       items: [
-        { text: "$250 worth of deco credits", icon: "redeem" },
-        { text: "2 premium seats for 3 months", icon: "workspace_premium" },
-        { text: "Inclusion in the Deco Agent Catalog", icon: "star" },
+        { text: "$250 in credits on our platform", icon: "redeem" },
+        { text: "1 premium seat for 3 months", icon: "workspace_premium" },
       ],
       variant: "bronze",
     },
   ],
   id = "prizes",
+  badgeText = "Prizes",
 }: Props) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -139,86 +142,94 @@ export default function HackaPrizes({
 
   const variantStyles = {
     gold: {
-      bg: "bg-yellow-100",
-      border: "border-yellow-300",
-      text: "text-yellow-900",
-      icon: "text-yellow-600",
+      bg: "bg-yellow-light",
+      border: "border-yellow-dark/20",
+      text: "text-yellow-dark",
+      icon: "text-yellow-dark",
       trophy: "emoji_events",
     },
     silver: {
-      bg: "bg-gray-100",
-      border: "border-gray-300",
-      text: "text-gray-900",
-      icon: "text-gray-600",
+      bg: "bg-primary-light",
+      border: "border-primary-dark/20",
+      text: "text-primary-dark",
+      icon: "text-primary-dark",
       trophy: "military_tech",
     },
     bronze: {
-      bg: "bg-orange-100",
-      border: "border-orange-300",
-      text: "text-orange-900",
-      icon: "text-orange-600",
+      bg: "bg-purple-light",
+      border: "border-purple-dark/20",
+      text: "text-purple-dark",
+      icon: "text-purple-dark",
       trophy: "workspace_premium",
     },
   };
 
   return (
-    <div
-      ref={sectionRef}
-      id={id}
-      class="w-full bg-primary-light px-4 md:px-20 py-16 md:py-32"
-    >
-      <div class="max-w-[1200px] mx-auto">
+    <div class="w-full bg-dc-50 p-4">
+      <div class="mx-auto">
         <div
-          ref={contentRef}
-          class="text-center mb-16 md:mb-24"
+          ref={sectionRef}
+          id={id}
+          class="relative bg-primary-dark rounded-3xl px-4 md:px-20 py-24 md:py-40"
         >
-          <Badge text="Prizes" variant="yellow" />
-          <h2 class="text-3xl md:text-5xl text-primary-dark font-medium mt-6 mb-8">
-            {title}
-          </h2>
-          <p class="text-lg md:text-xl text-primary-dark/80 max-w-3xl mx-auto">
-            {description}
-          </p>
-        </div>
+          <div class="max-w-[1200px] mx-auto">
+            <div
+              ref={contentRef}
+              class="text-center mb-16 md:mb-24"
+            >
+              <Badge text={badgeText} variant="yellow" />
+              <h2 class="text-3xl md:text-5xl text-primary-light font-medium mt-6 mb-8">
+                {title}
+              </h2>
+              <p class="text-lg md:text-xl text-primary-light/80 max-w-3xl mx-auto">
+                {description}
+              </p>
+            </div>
 
-        <div
-          ref={prizesRef}
-          class="grid grid-cols-1 md:grid-cols-3 gap-8"
-        >
-          {prizes.map((prize) => {
-            const style = variantStyles[prize.variant];
-            return (
-              <div
-                class={`${style.bg} border-2 ${style.border} rounded-3xl p-8 relative overflow-hidden`}
-              >
-                {/* Trophy Icon */}
-                <div class="absolute -right-6 -top-6 w-24 h-24 flex items-center justify-center opacity-10">
-                  <span class={`material-icons text-[96px] ${style.icon}`}>
-                    {style.trophy}
-                  </span>
-                </div>
-
-                {/* Position */}
-                <div class={`text-2xl font-bold ${style.text} mb-6`}>
-                  {prize.position}
-                </div>
-
-                {/* Prize Items */}
-                <div class="space-y-4">
-                  {prize.items.map((item) => (
-                    <div class="flex items-center gap-3">
-                      <span class={`material-icons ${style.icon}`}>
-                        {item.icon}
-                      </span>
-                      <span class={style.text}>
-                        {item.text}
+            <div
+              ref={prizesRef}
+              class="grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
+              {prizes.map((prize) => {
+                const style = variantStyles[prize.variant];
+                return (
+                  <div
+                    class={`${style.bg} border-2 ${style.border} rounded-3xl p-12 relative overflow-hidden backdrop-blur-sm min-h-[360px] flex flex-col`}
+                  >
+                    {/* Trophy Icon */}
+                    <div class="absolute -right-6 -top-6 w-24 h-24 flex items-center justify-center opacity-10">
+                      <span
+                        class={`material-symbols-rounded text-[96px] ${style.icon}`}
+                      >
+                        {style.trophy}
                       </span>
                     </div>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+
+                    {/* Position */}
+                    <div class={`text-4xl font-medium ${style.text} mb-8`}>
+                      {prize.position}
+                    </div>
+
+                    {/* Prize Items */}
+                    <div class="space-y-6 flex-1">
+                      {prize.items.map((item) => (
+                        <div class="flex items-center gap-4">
+                          <span
+                            class={`material-symbols-rounded text-2xl ${style.icon}`}
+                          >
+                            {item.icon}
+                          </span>
+                          <span class={`${style.text} text-lg`}>
+                            {item.text}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </div>

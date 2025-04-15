@@ -17,7 +17,7 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Material Icons font */}
         <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
           rel="stylesheet"
         />
 
@@ -38,6 +38,18 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
+
+        <style>
+          {`
+            .material-symbols-rounded {
+              font-variation-settings:
+              'FILL' 1,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 24
+            }
+          `}
+        </style>
       </Head>
 
       {/* Rest of Preact tree */}

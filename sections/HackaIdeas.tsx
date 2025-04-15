@@ -19,7 +19,22 @@ interface ProjectIdea {
   /**
    * @description The color variant for the project card
    */
-  variant: "primary" | "purple" | "yellow" | "green";
+  variant: "primary" | "purple" | "yellow";
+}
+
+interface Example {
+  /**
+   * @description The example title
+   */
+  title: string;
+  /**
+   * @description First image for the example
+   */
+  image1: ImageWidget;
+  /**
+   * @description Second image for the example
+   */
+  image2: ImageWidget;
 }
 
 export interface Props {
@@ -33,7 +48,7 @@ export interface Props {
    */
   description?: string;
   /**
-   * @description The project ideas list
+   * @description The project ideas
    */
   ideas?: ProjectIdea[];
   /**
@@ -41,43 +56,66 @@ export interface Props {
    * @default "ideas"
    */
   id?: string;
+  /**
+   * @description The badge text
+   * @default "Ideas"
+   */
+  badgeText?: string;
+  /**
+   * @description The examples section title
+   */
+  examplesTitle?: string;
+  /**
+   * @description The examples to display
+   */
+  examples?: Example[];
 }
 
 export default function HackaIdeas({
-  title = "Project Ideas",
+  title = "Need a spark? Try one of these:",
   description =
-    "Need inspiration? Here are a few sample use cases. Feel free to create any type of solution that showcases MCPs and AI Agents on the Deco platform!",
+    "Or dream up your own AI solution—anything that showcases MCPs and / or Agents is fair game!",
   ideas = [
     {
       title: "Personal Finance Assistant",
-      description:
-        "Automates spending analysis and savings strategies. Helps users track expenses, set budgets, and receive personalized financial advice.",
+      description: "Automates spending analysis and savings tips",
       icon: "account_balance",
       variant: "primary",
     },
     {
       title: "Content Research Agent",
-      description:
-        "Gathers and summarizes data from multiple sources. Perfect for content creators, researchers, and journalists needing comprehensive insights.",
+      description: "Gathers and summarizes data from multiple sources",
       icon: "search",
       variant: "purple",
     },
     {
       title: "Code Review Assistant",
-      description:
-        "Spots bugs and suggests optimizations for developers. Analyzes code quality, identifies potential issues, and recommends improvements.",
+      description: "Spots bugs, suggests optimizations",
       icon: "code",
       variant: "yellow",
     },
     {
       title: "Health Monitoring Agent",
       description:
-        "Tracks health metrics, identifies trends, and recommends improvements. Helps users maintain a healthy lifestyle with personalized guidance.",
+        "Tracks metrics, identifies trends, offers personalized advice",
       icon: "monitor_heart",
-      variant: "green",
+      variant: "primary",
     },
   ],
   id = "ideas",
+  badgeText = "Ideas",
+  examples = [
+    {
+      title: "Example of MCP Servers",
+      image1: "",
+      image2: "",
+    },
+    {
+      title: "Example Agent",
+      image1: "",
+      image2: "",
+    },
+  ],
 }: Props) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -131,32 +169,22 @@ export default function HackaIdeas({
 
   const variantStyles = {
     primary: {
-      bg: "bg-primary-light",
+      bg: "bg-primary-dark",
+      text: "text-primary-light",
+      accent: "bg-primary-light",
       icon: "text-primary-dark",
-      title: "text-primary-dark",
-      description: "text-primary-dark/70",
-      pattern: "from-primary-dark/10 to-transparent",
     },
     purple: {
-      bg: "bg-purple-light",
+      bg: "bg-purple-dark",
+      text: "text-purple-light",
+      accent: "bg-purple-light",
       icon: "text-purple-dark",
-      title: "text-purple-dark",
-      description: "text-purple-dark/70",
-      pattern: "from-purple-dark/10 to-transparent",
     },
     yellow: {
-      bg: "bg-yellow-light",
+      bg: "bg-yellow-dark",
+      text: "text-yellow-light",
+      accent: "bg-yellow-light",
       icon: "text-yellow-dark",
-      title: "text-yellow-dark",
-      description: "text-yellow-dark/70",
-      pattern: "from-yellow-dark/10 to-transparent",
-    },
-    green: {
-      bg: "bg-green-100",
-      icon: "text-green-800",
-      title: "text-green-800",
-      description: "text-green-800/70",
-      pattern: "from-green-800/10 to-transparent",
     },
   };
 
@@ -167,53 +195,75 @@ export default function HackaIdeas({
       class="w-full bg-dc-50 px-4 md:px-20 py-16 md:py-32"
     >
       <div class="max-w-[1200px] mx-auto">
-        <div
-          ref={contentRef}
-          class="text-center mb-16 md:mb-24"
-        >
-          <Badge text="Ideas" variant="purple" />
-          <h2 class="text-3xl md:text-5xl text-dc-900 font-medium mt-6 mb-8">
-            {title}
-          </h2>
-          <p class="text-lg md:text-xl text-dc-800 max-w-3xl mx-auto">
-            {description}
-          </p>
+        <div ref={contentRef} class="mb-16">
+          <div class="text-center mb-12">
+            <Badge text={badgeText} variant="purple" />
+            <h2 class="text-3xl md:text-5xl text-primary-dark font-medium mt-6">
+              {title}
+            </h2>
+          </div>
+
+          {/* Ideas Grid */}
+          <div class="max-w-5xl mx-auto px-4 md:px-8">
+            <div
+              ref={ideasRef}
+              class="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-6 md:gap-y-8"
+            >
+              {ideas.map((idea) => {
+                const style = variantStyles[idea.variant];
+                return (
+                  <div class="flex items-start gap-4 md:gap-6 group">
+                    <div
+                      class={`w-12 md:w-14 h-12 md:h-14 rounded-xl ${style.accent} flex items-center justify-center flex-shrink-0`}
+                    >
+                      <span
+                        class={`material-symbols-rounded text-2xl md:text-3xl ${style.icon}`}
+                      >
+                        {idea.icon}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 class="text-lg md:text-xl font-medium text-primary-dark group-hover:text-primary transition-colors duration-300 mb-2">
+                        {idea.title}
+                      </h3>
+                      <p class="text-sm md:text-base text-primary-dark/80">
+                        {idea.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
-        <div
-          ref={ideasRef}
-          class="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
-          {ideas.map((idea) => {
-            const style = variantStyles[idea.variant];
-            return (
-              <div
-                class={`${style.bg} rounded-3xl p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300`}
-              >
-                {/* Background Pattern */}
-                <div
-                  class={`absolute inset-0 bg-gradient-to-br ${style.pattern} opacity-50 group-hover:opacity-100 transition-opacity duration-300`}
-                />
+        {/* Examples Section */}
+        <div class="bg-primary-dark rounded-3xl p-6 md:p-12">
+          <div class="text-center mb-8 md:mb-12">
+            <p class="text-lg md:text-xl text-primary-light/80">
+              {description}
+            </p>
+          </div>
 
-                {/* Content */}
-                <div class="relative z-10">
-                  <div class="w-16 h-16 rounded-2xl bg-white/80 backdrop-blur-sm flex items-center justify-center mb-6">
-                    <span class={`material-icons text-3xl ${style.icon}`}>
-                      {idea.icon}
-                    </span>
-                  </div>
-
-                  <h3 class={`text-2xl font-medium mb-4 ${style.title}`}>
-                    {idea.title}
-                  </h3>
-
-                  <p class={`${style.description}`}>
-                    {idea.description}
-                  </p>
+          <div class="max-w-5xl mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+              {examples.map((example) => (
+                <div>
+                  <h4 class="text-xl font-medium text-primary-light mb-8 text-center">
+                    {example.title}
+                  </h4>
+                  {example.image1 && (
+                    <img
+                      src={example.image1}
+                      alt={example.title}
+                      class="w-full rounded-xl"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
