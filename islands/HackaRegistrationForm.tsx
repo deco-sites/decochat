@@ -68,7 +68,7 @@ export default function HackaRegistrationForm({
 
     try {
       // Simulate API call
-      const response = await fetch("/api/submission.ts", {
+      const response = await fetch("/api/submission", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
