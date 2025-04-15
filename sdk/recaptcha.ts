@@ -19,8 +19,9 @@ export function verifyCaptcha(token: string): Promise<boolean> {
       })
     },
   )
-    .then((response) => response.json() as Promise<{ success: boolean }>)
-    .then((data) => {
-      return data.success;
+    .then((response) =>
+      response.json() as Promise<{ tokenProperties: {valid: boolean} }>
+  ).then((data) => {
+      return data.tokenProperties.valid;
     });
 }
