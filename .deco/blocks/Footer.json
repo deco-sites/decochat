@@ -1,1 +1,9 @@
-{"__resolveType":"site/sections/Footer.tsx"}
+{
+  "__resolveType": "site/sections/Footer.tsx",
+  "logo": "https://assets.decocache.com/decochat/a605dcd2-c33a-4ef7-909c-02c59a639e31/logo-neg.svg",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/deco.chat/",
+    "twitter": "https://x.com/decochat",
+    "linkedin": "https://www.linkedin.com/company/getdeco"
+  }
+}
