@@ -3,11 +3,6 @@ description:
 globs: 
 alwaysApply: false
 ---
-Okay, I understand. You want a powerful prompt that instructs an LLM to take potentially messy Tailwind HTML (exported from Figma) and transform it into a well-structured, responsive, and animated Deco.cx website, following the platform's best practices.
-
-Based on your requirements and the goal of leveraging Deco.cx documentation effectively, here is a detailed prompt you can use:
-
-```markdown
 # Prompt: Convert Figma Tailwind HTML to a Structured Deco.cx Website
 
 ## Persona:

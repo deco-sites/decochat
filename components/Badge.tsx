@@ -75,7 +75,7 @@ export default function Badge({
     >
       {icon && (
         <span
-          class={`material-icons ${textColor}`}
+          class={`material-symbols-rounded ${textColor}`}
           style={{ fontSize: `${iconSize}px` }}
         >
           {icon}

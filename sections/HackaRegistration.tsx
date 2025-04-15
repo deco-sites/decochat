@@ -97,11 +97,6 @@ export default function HackaRegistration({
           <h2 class="text-3xl md:text-5xl text-primary-dark font-medium mt-6 mb-4">
             {title}
           </h2>
-          <p class="text-primary-dark/60 text-lg max-w-2xl mx-auto ">
-            Join our community of AI enthusiasts and developers. Whether you're
-            just starting or you're an experienced professional, there's a place
-            for you here.
-          </p>
         </div>
 
         <div class="flex justify-center">

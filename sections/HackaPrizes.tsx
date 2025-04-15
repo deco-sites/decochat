@@ -57,8 +57,6 @@ export interface Props {
 
 export default function HackaPrizes({
   title = "Prizes & Recognition",
-  description =
-    "Your chance to win money, credits, premium access, and a spot in Deco's Agent Catalog.",
   prizes = [
     {
       position: "1st Place",
@@ -181,9 +179,6 @@ export default function HackaPrizes({
               <h2 class="text-3xl md:text-5xl text-primary-light font-medium mt-6 mb-8">
                 {title}
               </h2>
-              <p class="text-lg md:text-xl text-primary-light/80 max-w-3xl mx-auto">
-                {description}
-              </p>
             </div>
 
             <div

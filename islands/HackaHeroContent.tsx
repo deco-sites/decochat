@@ -26,6 +26,10 @@ interface Props {
      * @description Material icon name
      */
     icon: string;
+    /**
+     * @description Optional URL for the highlight text
+     */
+    link?: string;
   }[];
 }
 
@@ -86,7 +90,7 @@ export default function HackaHeroContent({
 
   return (
     <div class="flex flex-col items-center text-center">
-      <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl max-w-2xl text-primary-light font-semibold mb-4 md:mb-6 opacity-0 animate-fade-up [animation-delay:400ms]">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl max-w-2xl text-primary-light font-semibold mb-4 md:mb-6 opacity-0 animate-fade-up [animation-delay:400ms]">
         {title}
       </h1>
       <p
@@ -102,9 +106,20 @@ export default function HackaHeroContent({
               <span class="material-symbols-rounded text-xl md:text-2xl text-primary-light">
                 {highlight.icon}
               </span>
-              <span class="text-base md:text-lg text-dc-50">
-                {highlight.text}
-              </span>
+              {highlight.link
+                ? (
+                  <a
+                    href={highlight.link}
+                    class="text-base md:text-lg text-dc-50 hover:text-purple-light transition-colors"
+                  >
+                    {highlight.text}
+                  </a>
+                )
+                : (
+                  <span class="text-base md:text-lg text-dc-50">
+                    {highlight.text}
+                  </span>
+                )}
             </div>
             {index < highlights.length - 1 && (
               <div class="hidden sm:block h-6 w-px bg-dc-50/20" />

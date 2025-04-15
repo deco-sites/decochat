@@ -65,6 +65,10 @@ export interface Props {
      * @description Material icon name
      */
     icon: string;
+    /**
+     * @description Optional URL for the highlight text
+     */
+    link?: string;
   }[];
 }
 

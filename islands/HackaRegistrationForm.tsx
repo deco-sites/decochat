@@ -141,188 +141,167 @@ export default function HackaRegistrationForm({
               >
                 introduce yourself
               </a>{" "}
-              and start connecting with potential{" "}
+              and{"   "}
               <a
                 href="https://discord.com/channels/985687648595243068/1042862479371423814"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-green-600 font-medium underline hover:text-green-900 transition-colors"
               >
-                teammates
+                start connecting with potential teammates
               </a>!
             </div>
           </div>
         )
         : (
           <>
-          <form
-            class="w-full"
-            id={FORM_ID}
-          >
-            <div class="space-y-6">
-              <div>
-                <label
-                  for="fullName"
-                  class="block text-primary-dark font-medium mb-2"
-                >
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  value={formData.value.fullName}
-                  onInput={handleInput}
-                  required
-                  class="w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-primary-dark placeholder-primary-dark/60 focus:outline-none focus:border-primary-dark/40 transition-colors"
-                  placeholder="John Doe"
-                />
-              </div>
-
-              <div>
-                <label
-                  for="email"
-                  class="block text-primary-dark font-medium mb-2"
-                >
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.value.email}
-                  onInput={handleInput}
-                  required
-                  class="w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-primary-dark placeholder-primary-dark/60 focus:outline-none focus:border-primary-dark/40 transition-colors"
-                  placeholder="john@example.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  for="linkedinUrl"
-                  class="block text-primary-dark font-medium mb-2"
-                >
-                  LinkedIn URL
-                </label>
-                <input
-                  type="url"
-                  id="linkedinUrl"
-                  name="linkedinUrl"
-                  value={formData.value.linkedinUrl}
-                  onInput={handleInput}
-                  required
-                  class="w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-primary-dark placeholder-primary-dark/60 focus:outline-none focus:border-primary-dark/40 transition-colors"
-                  placeholder="https://linkedin.com/in/username"
-                />
-              </div>
-
-              <div>
-                <label class="block text-primary-dark font-medium mb-2">
-                  Pick Your Experience Level
-                </label>
-                <div class="relative" ref={selectRef}>
-                  <button
-                    type="button"
-                    class={`w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-left focus:outline-none focus:border-primary-dark/40 transition-colors ${
-                      !formData.value.experienceLevel
-                        ? "text-primary-dark/60"
-                        : "text-primary-dark"
-                    }`}
-                    onClick={() => setIsSelectOpen(!isSelectOpen)}
+            <form
+              class="w-full"
+              id={FORM_ID}
+            >
+              <div class="space-y-6">
+                <div>
+                  <label
+                    for="fullName"
+                    class="block text-primary-dark font-medium mb-2"
                   >
-                    {selectedLevel
-                      ? selectedLevel.label
-                      : "Select your experience level"}
-                  </button>
-
-                  {isSelectOpen && (
-                    <div class="absolute z-10 w-full mt-2 bg-white border border-primary-dark/20 rounded-xl shadow-lg overflow-hidden">
-                      {experienceLevels.map((level) => (
-                        <button
-                          type="button"
-                          key={level.value}
-                          class={`w-full px-4 py-3 text-left hover:bg-primary-dark/5 transition-colors ${
-                            formData.value.experienceLevel === level.value
-                              ? "bg-primary-dark/10"
-                              : ""
-                          }`}
-                          onClick={() => {
-                            formData.value = {
-                              ...formData.value,
-                              experienceLevel: level.value,
-                            };
-                            setIsSelectOpen(false);
-                          }}
-                        >
-                          <div class="font-medium text-primary-dark">
-                            {level.label}
-                          </div>
-                          <div class="text-sm text-primary-dark/60 mt-1">
-                            {level.description}
-                          </div>
-                        </button>
-                      ))}
-                    </div>
-                  )}
-
+                    Full Name
+                  </label>
                   <input
-                    type="hidden"
-                    name="experienceLevel"
-                    value={formData.value.experienceLevel}
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    value={formData.value.fullName}
+                    onInput={handleInput}
                     required
+                    class="w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-primary-dark placeholder-primary-dark/60 focus:outline-none focus:border-primary-dark/40 transition-colors"
+                    placeholder="John Doe"
                   />
                 </div>
-              </div>
 
-              <div class="flex items-start gap-3 mt-6">
-                <input
-                  type="checkbox"
-                  id="agreeToTerms"
-                  name="agreeToTerms"
-                  checked={formData.value.agreeToTerms}
-                  onInput={handleInput}
-                  required
-                  class="mt-1 h-4 w-4 rounded border-primary-dark/20 text-primary-dark focus:ring-primary-dark"
-                />
-                <label
-                  for="agreeToTerms"
-                  class="text-primary-dark/80 text-sm"
-                >
-                  I agree to the event's terms and conditions
-                </label>
-              </div>
-
-              {isError.value && (
-                <div class="p-4 bg-red-100 border border-red-200 rounded-xl text-red-800">
-                  {!formData.value.agreeToTerms
-                    ? "Please agree to the terms and conditions to continue."
-                    : errorMessage}
+                <div>
+                  <label
+                    for="email"
+                    class="block text-primary-dark font-medium mb-2"
+                  >
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.value.email}
+                    onInput={handleInput}
+                    required
+                    class="w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-primary-dark placeholder-primary-dark/60 focus:outline-none focus:border-primary-dark/40 transition-colors"
+                    placeholder="john@example.com"
+                  />
                 </div>
-              )}
-              <button
-                class="w-full"
-                disabled={isSubmitting.value}
-                onClick={(e) => {
-                  e.preventDefault();
-                  (globalThis as any).grecaptcha.enterprise.ready(function() {
-                    (globalThis as any).grecaptcha.enterprise.execute(`${RECAPTCHA_SITE_KEY}`, {action: 'submit'}).then(function(token) {
-                      handleSubmit(e, token);
-                    });
-                  });
-                }
-              }
-              >
-                <Button
-                  variant="primary"
-                  size="lg"
+
+                <div>
+                  <label
+                    for="linkedinUrl"
+                    class="block text-primary-dark font-medium mb-2"
+                  >
+                    LinkedIn URL
+                  </label>
+                  <input
+                    type="url"
+                    id="linkedinUrl"
+                    name="linkedinUrl"
+                    value={formData.value.linkedinUrl}
+                    onInput={handleInput}
+                    required
+                    class="w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-primary-dark placeholder-primary-dark/60 focus:outline-none focus:border-primary-dark/40 transition-colors"
+                    placeholder="https://linkedin.com/in/username"
+                  />
+                </div>
+
+                <div>
+                  <label class="block text-primary-dark font-medium mb-2">
+                    Pick Your Experience Level
+                  </label>
+                  <div class="relative" ref={selectRef}>
+                    <button
+                      type="button"
+                      class={`w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-left focus:outline-none focus:border-primary-dark/40 transition-colors ${
+                        !formData.value.experienceLevel
+                          ? "text-primary-dark/60"
+                          : "text-primary-dark"
+                      }`}
+                      onClick={() => setIsSelectOpen(!isSelectOpen)}
+                    >
+                      {selectedLevel
+                        ? selectedLevel.label
+                        : "Select your experience level"}
+                    </button>
+
+                    {isSelectOpen && (
+                      <div class="absolute z-10 w-full mt-2 bg-white border border-primary-dark/20 rounded-xl shadow-lg overflow-hidden">
+                        {experienceLevels.map((level) => (
+                          <button
+                            type="button"
+                            key={level.value}
+                            class={`w-full px-4 py-3 text-left hover:bg-primary-dark/5 transition-colors ${
+                              formData.value.experienceLevel === level.value
+                                ? "bg-primary-dark/10"
+                                : ""
+                            }`}
+                            onClick={() => {
+                              formData.value = {
+                                ...formData.value,
+                                experienceLevel: level.value,
+                              };
+                              setIsSelectOpen(false);
+                            }}
+                          >
+                            <div class="font-medium text-primary-dark">
+                              {level.label}
+                            </div>
+                            <div class="text-sm text-primary-dark/60 mt-1">
+                              {level.description}
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+
+                    <input
+                      type="hidden"
+                      name="experienceLevel"
+                      value={formData.value.experienceLevel}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button
+                  class="w-full"
+                  disabled={isSubmitting.value}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    (globalThis as any).grecaptcha.enterprise.ready(
+                      function () {
+                        (globalThis as any).grecaptcha.enterprise.execute(
+                          `${RECAPTCHA_SITE_KEY}`,
+                          { action: "submit" },
+                        ).then(function (token) {
+                          handleSubmit(e, token);
+                        });
+                      },
+                    );
+                  }}
                 >
-                  {isSubmitting.value ? "Registering..." : buttonText}
-                </Button>
-              </button>
-            </div>
-          </form>
-          <ReCAPTCHA formId={FORM_ID} />
+                  <Button
+                    variant="primary"
+                    size="lg"
+                  >
+                    {isSubmitting.value ? "Registering..." : buttonText}
+                  </Button>
+                </button>
+              </div>
+            </form>
+            <ReCAPTCHA formId={FORM_ID} />
           </>
         )}
     </div>

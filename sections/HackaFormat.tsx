@@ -45,7 +45,13 @@ interface TimelineEvent {
   /**
    * @description The event items/activities
    */
-  items: string[];
+  items: Array<{
+    /**
+     * @description The item content that supports HTML
+     * @format rich-text
+     */
+    content: string;
+  }>;
 }
 
 export interface Props {
@@ -135,19 +141,38 @@ export default function HackaFormat({
       date: "April 25",
       title: "Hackathon Officially Opens",
       items: [
-        "Join our Discord and explore the Deco platform",
-        "(Time TBA): Intro to MCPs & AI Agents (theory + practical demos), also accessible async",
-        "(Time TBA): Demo of the Deco platform (tour of Deco.chat & Deco.host), with technical and non-technical resources",
-        "Start brainstorming and building! Work solo or in teams and ask mentors for feedback and join Office Hours",
+        {
+          content:
+            "Join our <a href='https://deco.cx/discord' class='underline hover:text-purple-light transition-colors'>Discord</a> and explore the Deco platform",
+        },
+        {
+          content:
+            "(Time TBA): Intro to MCPs & AI Agents (theory + practical demos), also accessible async",
+        },
+        {
+          content:
+            "(Time TBA): Demo of the <a href='https://deco.chat' class='underline hover:text-purple-light transition-colors'>Deco platform</a> (tour of <a href='https://deco.chat' class='underline hover:text-purple-light transition-colors'>Deco.chat</a> & <a href='https://deco.host' class='underline hover:text-purple-light transition-colors'>Deco.host</a>), with technical and non-technical resources",
+        },
+        {
+          content:
+            "Start brainstorming and building! Work solo or in teams and ask mentors for feedback and join Office Hours",
+        },
       ],
     },
     {
       date: "April 26",
       title: "Demo Submission and Results Announcement",
       items: [
-        "Record a short demo video of your solution (submission details at the event)",
-        "Winners revealed",
-        "Prizes awarded",
+        {
+          content:
+            "Record a short demo video of your solution (submission details at the event)",
+        },
+        {
+          content: "Winners revealed",
+        },
+        {
+          content: "Prizes awarded",
+        },
       ],
     },
   ],
@@ -347,7 +372,13 @@ export default function HackaFormat({
                   }`}
                 >
                   {event.items.map((item) => (
-                    <div class="flex items-start gap-4 group pl-6">
+                    <div
+                      class={`flex items-start gap-4 group pl-6 text-lg sm:text-xl ${
+                        index === 0
+                          ? "text-primary-dark/90"
+                          : "text-yellow-dark/90"
+                      }`}
+                    >
                       <div
                         class={`absolute left-[6px] w-3 h-3 rounded-full mt-[8px] -translate-x-[6px] group-hover:scale-150 transition-transform ${
                           index === 0
@@ -356,15 +387,9 @@ export default function HackaFormat({
                         }`}
                       >
                       </div>
-                      <p
-                        class={`text-lg sm:text-xl ${
-                          index === 0
-                            ? "text-primary-dark/90"
-                            : "text-yellow-dark/90"
-                        }`}
-                      >
-                        {item}
-                      </p>
+                      <div
+                        dangerouslySetInnerHTML={{ __html: item.content }}
+                      />
                     </div>
                   ))}
                 </div>
