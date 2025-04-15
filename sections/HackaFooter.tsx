@@ -119,7 +119,9 @@ export default function HackaFooter({
                   class="text-dc-100 hover:text-dc-50 transition-colors"
                   title="Follow us on Instagram"
                 >
-                  <span class="material-icons text-2xl">photo_camera</span>
+                  <span class="material-symbols-rounded text-2xl">
+                    photo_camera
+                  </span>
                 </a>
               )}
               {socialLinks.twitter && (
@@ -130,7 +132,9 @@ export default function HackaFooter({
                   class="text-dc-100 hover:text-dc-50 transition-colors"
                   title="Follow us on Twitter"
                 >
-                  <span class="material-icons text-2xl">flutter_dash</span>
+                  <span class="material-symbols-rounded text-2xl">
+                    flutter_dash
+                  </span>
                 </a>
               )}
               {socialLinks.linkedin && (
@@ -141,7 +145,9 @@ export default function HackaFooter({
                   class="text-dc-100 hover:text-dc-50 transition-colors"
                   title="Follow us on LinkedIn"
                 >
-                  <span class="material-icons text-2xl">business_center</span>
+                  <span class="material-symbols-rounded text-2xl">
+                    business_center
+                  </span>
                 </a>
               )}
               {socialLinks.github && (
@@ -152,7 +158,7 @@ export default function HackaFooter({
                   class="text-dc-100 hover:text-dc-50 transition-colors"
                   title="Visit our GitHub"
                 >
-                  <span class="material-icons text-2xl">code</span>
+                  <span class="material-symbols-rounded text-2xl">code</span>
                 </a>
               )}
               {socialLinks.discord && (
@@ -163,7 +169,7 @@ export default function HackaFooter({
                   class="text-dc-100 hover:text-dc-50 transition-colors"
                   title="Join our Discord"
                 >
-                  <span class="material-icons text-2xl">forum</span>
+                  <span class="material-symbols-rounded text-2xl">forum</span>
                 </a>
               )}
             </div>

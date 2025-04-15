@@ -19,10 +19,11 @@ import * as $$$$$$11 from "./sections/HackaMCP.tsx";
 import * as $$$$$$12 from "./sections/HackaPrizes.tsx";
 import * as $$$$$$13 from "./sections/HackaRegistration.tsx";
 import * as $$$$$$14 from "./sections/HackaSponsors.tsx";
-import * as $$$$$$15 from "./sections/Hero.tsx";
-import * as $$$$$$16 from "./sections/Integrations.tsx";
-import * as $$$$$$17 from "./sections/ItWorks.tsx";
-import * as $$$$$$18 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$15 from "./sections/HackaWhoIsItFor.tsx";
+import * as $$$$$$16 from "./sections/Hero.tsx";
+import * as $$$$$$17 from "./sections/Integrations.tsx";
+import * as $$$$$$18 from "./sections/ItWorks.tsx";
+import * as $$$$$$19 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -41,10 +42,11 @@ const manifest = {
     "site/sections/HackaPrizes.tsx": $$$$$$12,
     "site/sections/HackaRegistration.tsx": $$$$$$13,
     "site/sections/HackaSponsors.tsx": $$$$$$14,
-    "site/sections/Hero.tsx": $$$$$$15,
-    "site/sections/Integrations.tsx": $$$$$$16,
-    "site/sections/ItWorks.tsx": $$$$$$17,
-    "site/sections/Theme/Theme.tsx": $$$$$$18,
+    "site/sections/HackaWhoIsItFor.tsx": $$$$$$15,
+    "site/sections/Hero.tsx": $$$$$$16,
+    "site/sections/Integrations.tsx": $$$$$$17,
+    "site/sections/ItWorks.tsx": $$$$$$18,
+    "site/sections/Theme/Theme.tsx": $$$$$$19,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

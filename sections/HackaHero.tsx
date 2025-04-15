@@ -33,6 +33,11 @@ export interface Props {
    */
   id?: string;
   /**
+   * @description The badge text
+   * @default "Hackathon"
+   */
+  badgeText?: string;
+  /**
    * @description Highlight points to display below the button
    */
   highlights?: {
@@ -55,6 +60,7 @@ export default function HackaHero({
   ctaLink = "#register",
   endDate = "2024-03-31T23:59:59",
   id = "hero",
+  badgeText = "Hackathon",
   highlights = [
     {
       text: "100% remote",
@@ -71,15 +77,15 @@ export default function HackaHero({
   ],
 }: Props) {
   return (
-    <div class="w-full bg-dc-50 p-4 h-screen">
+    <div class="w-full bg-dc-50 p-4 min-h-screen">
       <div class="mx-auto h-full">
         <div
           id={id}
-          class="relative flex flex-col justify-center items-center h-full bg-primary-dark rounded-3xl px-4 md:px-20 py-24 md:py-40"
+          class="relative flex flex-col justify-center items-center h-full bg-primary-dark rounded-3xl px-4 md:px-20 py-16 md:py-32"
         >
           <div class="max-w-[1200px] mx-auto text-primary-light">
-            <div class="text-center mb-8">
-              <Badge text="Hackathon" variant="primary" />
+            <div class="text-center mb-6 md:mb-8">
+              <Badge text={badgeText} variant="primary" />
             </div>
 
             <HackaHeroContent

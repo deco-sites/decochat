@@ -189,7 +189,7 @@ export default function HackaAgent({
             {capabilities.map((capability) => (
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-xl bg-yellow-light flex items-center justify-center flex-shrink-0">
-                  <span class="material-icons text-2xl text-yellow-dark">
+                  <span class="material-symbols-rounded text-2xl text-yellow-dark">
                     {capability.icon}
                   </span>
                 </div>

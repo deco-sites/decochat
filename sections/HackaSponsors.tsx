@@ -40,6 +40,11 @@ export interface Props {
    * @default "sponsors"
    */
   id?: string;
+  /**
+   * @description The badge text
+   * @default "Sponsors"
+   */
+  badgeText?: string;
 }
 
 const tierConfig = {
@@ -79,6 +84,7 @@ export default function HackaSponsors({
     // Add more sponsors here when available
   ],
   id = "sponsors",
+  badgeText = "Sponsors",
 }: Props) {
   return (
     <div
@@ -87,7 +93,7 @@ export default function HackaSponsors({
     >
       <div class="max-w-[1200px] mx-auto">
         <div class="text-center mb-16 md:mb-24">
-          <Badge text="Sponsors" variant="primary" />
+          <Badge text={badgeText} variant="primary" />
           <h2 class="text-3xl md:text-5xl text-dc-900 font-medium mt-6 mb-8">
             {title}
           </h2>
