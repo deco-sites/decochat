@@ -22,7 +22,8 @@
             "text": "$1,000 in prizes",
             "icon": "attach_money"
           }
-        ]
+        ],
+        "ctaText": "Register now"
       }
     },
     {
