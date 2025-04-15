@@ -8,7 +8,7 @@
       "description": "<p>Everyone's talking about AI Agents and MCP servers—but can you build them?<br>Whether you're a pro coder or brand-new to tech, join our Hackathon to automate tasks, supercharge your data, and conquer the AI wave.</p>",
       "ctaText": "Register now",
       "ctaLink": "#registerTop",
-      "endDate": "2025-04-25T16:00:00.000Z",
+      "endDate": "2025-04-25T23:00:00.000Z",
       "id": "hero",
       "badgeText": "Agents and MCP Hackathon, by deco.chat",
       "highlights": [
@@ -22,7 +22,7 @@
           "icon": "event"
         },
         {
-          "text": "Over $500 in prizes",
+          "text": "Over $1,000 in prizes",
           "icon": "attach_money"
         }
       ],
@@ -155,7 +155,7 @@
         },
         {
           "title": "Prizes",
-          "info": "Over $1,000 in credits",
+          "info": "Over $1,000 in credits and more",
           "icon": "redeem"
         }
       ],

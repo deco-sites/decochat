@@ -105,7 +105,7 @@ export default async function action(
                   text-align: center;
                 "
               >
-                <h1 style="color: #010C04 !important; margin: 0; font-size: 28px; -webkit-text-fill-color: #010C04;">
+                <h1 style="color:rgb(1, 12, 4); margin: 0; font-size: 28px">
                   🎉 Welcome to the Hackathon!
                 </h1>
               </td>
