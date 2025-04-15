@@ -1,13 +1,12 @@
 import { asset, Head } from "$fresh/runtime.ts";
 import { defineApp } from "$fresh/server.ts";
-import { Context } from "deco/deco.ts";
 import Theme from "../sections/Theme/Theme.tsx";
+import { Context } from "@deco/deco";
 
 export default defineApp(async (_req, ctx) => {
   const revision = await Context.active().release?.revision();
-
   return (
-    <>
+    <html class="bg-dc-50">
       {/* Include default fonts and css vars */}
       <Theme colorScheme="any" />
 
@@ -15,6 +14,21 @@ export default defineApp(async (_req, ctx) => {
       <Head>
         {/* Enable View Transitions API */}
         <meta name="view-transition" content="same-origin" />
+
+        {/* Material Icons font */}
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
+
+        {/* GSAP */}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js">
+        </script>
+
+        {/* Switzer font */}
+        <link href={asset("/fonts.css")} rel="stylesheet" />
 
         {/* Tailwind v3 CSS file */}
         <link
@@ -27,7 +41,9 @@ export default defineApp(async (_req, ctx) => {
       </Head>
 
       {/* Rest of Preact tree */}
-      <ctx.Component />
-    </>
+      <body class="bg-dc-50">
+        <ctx.Component />
+      </body>
+    </html>
   );
 });
