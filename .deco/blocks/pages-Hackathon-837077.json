@@ -4,6 +4,7 @@
   "sections": [
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "loading": "eager",
       "section": {
         "__resolveType": "site/sections/HackaHero.tsx",
         "title": "Build the future of AI with us",

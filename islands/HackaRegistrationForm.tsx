@@ -2,6 +2,8 @@ import { useSignal } from "@preact/signals";
 import Button from "../components/Button.tsx";
 import type { ExperienceLevel } from "../sections/HackaRegistration.tsx";
 import { useEffect, useRef, useState } from "preact/hooks";
+import ReCAPTCHA from "site/sections/ReCAPTCHA.tsx";
+export const RECAPTCHA_SITE_KEY = "6Le4oRkrAAAAAE510NaLMMvSoctvTpGKZKeo9h-x";
 
 interface Props {
   buttonText: string;
@@ -66,7 +68,17 @@ export default function HackaRegistrationForm({
 
     try {
       // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("/api/submission.ts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData.value),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
 
       // Reset form and show success message
       formData.value = {
@@ -77,7 +89,7 @@ export default function HackaRegistrationForm({
         agreeToTerms: false,
       };
       isSuccess.value = true;
-    } catch (error) {
+    } catch (_error) {
       isError.value = true;
     } finally {
       isSubmitting.value = false;
@@ -92,6 +104,8 @@ export default function HackaRegistrationForm({
       [input.name]: value,
     };
   };
+
+  const FORM_ID = "contact-form";
 
   return (
     <div class="w-full max-w-xl mx-auto">
@@ -143,9 +157,11 @@ export default function HackaRegistrationForm({
           </div>
         )
         : (
+          <>
           <form
             class="w-full"
             onSubmit={handleSubmit}
+            id={FORM_ID}
           >
             <div class="space-y-6">
               <div>
@@ -292,6 +308,9 @@ export default function HackaRegistrationForm({
               <button
                 class="w-full"
                 disabled={isSubmitting.value}
+                data-sitekey={RECAPTCHA_SITE_KEY}
+                data-callback="onSubmit"
+                data-action="submit"
               >
                 <Button
                   variant="primary"
@@ -302,6 +321,8 @@ export default function HackaRegistrationForm({
               </button>
             </div>
           </form>
+          <ReCAPTCHA formId={FORM_ID} />
+          </>
         )}
     </div>
   );

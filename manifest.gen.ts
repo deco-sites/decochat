@@ -23,7 +23,8 @@ import * as $$$$$$15 from "./sections/HackaWhoIsItFor.tsx";
 import * as $$$$$$16 from "./sections/Hero.tsx";
 import * as $$$$$$17 from "./sections/Integrations.tsx";
 import * as $$$$$$18 from "./sections/ItWorks.tsx";
-import * as $$$$$$19 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$19 from "./sections/ReCAPTCHA.tsx";
+import * as $$$$$$20 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
@@ -46,7 +47,8 @@ const manifest = {
     "site/sections/Hero.tsx": $$$$$$16,
     "site/sections/Integrations.tsx": $$$$$$17,
     "site/sections/ItWorks.tsx": $$$$$$18,
-    "site/sections/Theme/Theme.tsx": $$$$$$19,
+    "site/sections/ReCAPTCHA.tsx": $$$$$$19,
+    "site/sections/Theme/Theme.tsx": $$$$$$20,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,
