@@ -7,7 +7,7 @@ async function sendEmail(
     to: string;
     subject: string;
     html: string;
-  },
+  }
 ) {
   const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
@@ -31,34 +31,28 @@ async function sendEmail(
 }
 
 export type Props = {
-  recaptcha: string;
-  data: string;
+    recaptcha: string;
+    data: string;
 };
 
-export default async function action(
-  props: Props,
-  _req: Request,
-  _ctx: unknown,
-): Promise<void> {
-  const recaptchaToken = props.recaptcha;
-  const isCaptchaValid = await verifyCaptcha(recaptchaToken.toString());
-  console;
-  if (!isCaptchaValid) {
-    throw new Error("Invalid reCAPTCHA token");
-  }
-  const { data, error } = await getSupabaseClient().from("form_submission")
-    .insert({
+export default async function action(props: Props, _req: Request, _ctx: unknown): Promise<void> {
+    const recaptchaToken = props.recaptcha;
+    const isCaptchaValid = (await verifyCaptcha(recaptchaToken.toString()));
+    console
+    if (!isCaptchaValid) {
+        throw new Error("Invalid reCAPTCHA token");
+    }
+    const { data, error }  = await getSupabaseClient().from("form_submission").insert({
       data: JSON.parse(props.data),
       site_id: 16085,
     });
-  if (error) {
-    throw new Error(error.message);
-  }
-  sendEmail({
-    from: "cecilia@deco.cx",
-    to: JSON.parse(props.data).email,
-    subject: "🎉 You’re In! Welcome to the Agents & MCP Hackathon by deco.chat",
-    html: `<!DOCTYPE html>
+    if (error) {
+        throw new Error(error.message);
+    }
+    sendEmail({from: "cecilia@deco.cx",
+        to: JSON.parse(props.data).email,
+        subject: "🎉 You’re In! Welcome to the Agents & MCP Hackathon by deco.chat",
+        html: `<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -105,7 +99,7 @@ export default async function action(
                   text-align: center;
                 "
               >
-                <h1 style="color:rgb(1, 12, 4); margin: 0; font-size: 28px">
+                <h1 style="color:rgb(1, 20, 8); margin: 0; font-size: 28px">
                   🎉 Welcome to the Hackathon!
                 </h1>
               </td>
@@ -114,9 +108,7 @@ export default async function action(
             <!-- Main Content -->
             <tr>
               <td style="padding: 30px">
-                <p style="margin-top: 0">Hi ${
-      JSON.parse(props.data).fullName
-    },</p>
+                <p style="margin-top: 0">Hi ${JSON.parse(props.data).fullName},</p>
 
                 <p>Welcome aboard!</p>
 
@@ -288,13 +280,13 @@ export default async function action(
                       >
                       <span style="color: #666666">|</span>
                       <a
-                        href="mailto:hackathon@deco.cx"
+                        href="https://www.linkedin.com/company/getdeco"
                         style="
                           color: #666666;
                           text-decoration: none;
                           margin: 0 10px;
                         "
-                        >Email us</a
+                        >LinkedIn</a
                       >
                     </td>
                   </tr>
@@ -319,6 +311,6 @@ export default async function action(
       </tr>
     </table>
   </body>
-</html>`,
-  });
-}
+</html>`
+    })
+  };

@@ -30,7 +30,6 @@ export default function HackaRegistrationForm({
     email: "",
     linkedinUrl: "",
     experienceLevel: "",
-    agreeToTerms: false,
   });
 
   const selectedLevel = experienceLevels.find(
@@ -58,10 +57,6 @@ export default function HackaRegistrationForm({
     e.preventDefault();
 
     if (isSubmitting.value) return;
-    if (!formData.value.agreeToTerms) {
-      isError.value = true;
-      return;
-    }
 
     isSubmitting.value = true;
     isSuccess.value = false;
@@ -82,7 +77,6 @@ export default function HackaRegistrationForm({
         email: "",
         linkedinUrl: "",
         experienceLevel: "",
-        agreeToTerms: false,
       };
       isSuccess.value = true;
     } catch (_error) {
@@ -141,14 +135,14 @@ export default function HackaRegistrationForm({
               >
                 introduce yourself
               </a>{" "}
-              and{"   "}
+              and start connecting with potential{" "}
               <a
                 href="https://discord.com/channels/985687648595243068/1042862479371423814"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-green-600 font-medium underline hover:text-green-900 transition-colors"
               >
-                start connecting with potential teammates
+                teammates
               </a>!
             </div>
           </div>
@@ -275,6 +269,11 @@ export default function HackaRegistrationForm({
                   </div>
                 </div>
 
+                {isError.value && (
+                  <div class="p-4 bg-red-100 border border-red-200 rounded-xl text-red-800">
+                    {errorMessage}
+                  </div>
+                )}
                 <button
                   class="w-full"
                   disabled={isSubmitting.value}
@@ -285,7 +284,7 @@ export default function HackaRegistrationForm({
                         (globalThis as any).grecaptcha.enterprise.execute(
                           `${RECAPTCHA_SITE_KEY}`,
                           { action: "submit" },
-                        ).then(function (token) {
+                        ).then(function (token: string) {
                           handleSubmit(e, token);
                         });
                       },

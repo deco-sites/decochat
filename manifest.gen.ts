@@ -3,6 +3,7 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $$$$$$$$$0 from "./actions/submit.ts";
+import * as $$$$$$$$$1 from "./actions/teste.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$$$$0 from "./sections/CTA.tsx";
@@ -53,6 +54,7 @@ const manifest = {
   },
   "actions": {
     "site/actions/submit.ts": $$$$$$$$$0,
+    "site/actions/teste.ts": $$$$$$$$$1,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,
