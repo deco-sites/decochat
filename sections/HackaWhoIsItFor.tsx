@@ -39,7 +39,7 @@ export default function HackaWhoIsItFor({
   return (
     <div
       id={id}
-      class="w-full bg-dc-50 px-4 md:px-20 py-24 md:py-32"
+      class="w-full bg-dc-50 px-4 md:px-20 py-20 md:py-32"
     >
       <div class="max-w-[1200px] mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">

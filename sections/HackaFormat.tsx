@@ -271,7 +271,7 @@ export default function HackaFormat({
     <div
       ref={sectionRef}
       id={id}
-      class="w-full bg-dc-50 px-4 md:px-20 py-24 md:py-32"
+      class="w-full bg-dc-50 px-4 md:px-20 py-20 md:py-32"
     >
       <div class="max-w-[1200px] mx-auto">
         {/* Top section: Main content on left, Highlights on right */}

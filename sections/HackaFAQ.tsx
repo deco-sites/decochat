@@ -81,7 +81,7 @@ export default function HackaFAQ({
   return (
     <div
       id={id}
-      class="w-full bg-dc-50 px-4 md:px-20 py-12 md:py-32"
+      class="w-full bg-dc-50 px-4 md:px-20 py-20 md:py-32"
     >
       <div class="max-w-[1200px] mx-auto">
         <div class="text-center mb-12 md:mb-16">

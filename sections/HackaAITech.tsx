@@ -153,9 +153,9 @@ export default function HackaAITech({
   return (
     <div
       id={id}
-      class="w-full bg-dc-50 px-4 py-20 md:py-32"
+      class="w-full bg-dc-50 px-4 md:px-20 py-20 md:py-32"
     >
-      <div class="max-w-[1440px] mx-auto">
+      <div class="max-w-[1200px] mx-auto">
         <HackaAITechContent
           title={title}
           description={description}

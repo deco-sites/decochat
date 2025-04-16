@@ -122,16 +122,16 @@ export default function HackaRegistrationForm({
             <h3 class="text-2xl font-medium text-primary-dark">
               Registration Confirmed!
             </h3>
-            <p class="text-primary-dark/60">
+            <p class="text-lg text-primary-dark/60">
               Thank you for registering. We're excited to have you join us!
             </p>
-            <div class="p-4 bg-dc-100 border border-dc-200 rounded-xl text-dc-700">
+            <div class="p-4 bg-dc-100 border border-dc-200 rounded-xl text-lg text-dc-700">
               Once you're registered, feel free to{" "}
               <a
                 href="https://discord.com/channels/985687648595243068/1042862479371423814"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-green-600 font-medium underline hover:text-green-900 transition-colors"
+                class="text-lg text-green-600 font-medium underline hover:text-green-900 transition-colors"
               >
                 introduce yourself
               </a>{" "}
@@ -140,7 +140,7 @@ export default function HackaRegistrationForm({
                 href="https://discord.com/channels/985687648595243068/1042862479371423814"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-green-600 font-medium underline hover:text-green-900 transition-colors"
+                class="text-lg text-green-600 font-medium underline hover:text-green-900 transition-colors"
               >
                 teammates
               </a>!
@@ -215,7 +215,7 @@ export default function HackaRegistrationForm({
                   <label class="block text-primary-dark font-medium mb-2">
                     Pick Your Experience Level
                   </label>
-                  <div class="relative" ref={selectRef}>
+                  <div class="relative z-[100]" ref={selectRef}>
                     <button
                       type="button"
                       class={`w-full px-4 py-3 bg-white border border-primary-dark/20 rounded-xl text-left focus:outline-none focus:border-primary-dark/40 transition-colors ${
@@ -231,32 +231,40 @@ export default function HackaRegistrationForm({
                     </button>
 
                     {isSelectOpen && (
-                      <div class="absolute z-10 w-full mt-2 bg-white border border-primary-dark/20 rounded-xl shadow-lg overflow-hidden">
-                        {experienceLevels.map((level) => (
-                          <button
-                            type="button"
-                            key={level.value}
-                            class={`w-full px-4 py-3 text-left hover:bg-primary-dark/5 transition-colors ${
-                              formData.value.experienceLevel === level.value
-                                ? "bg-primary-dark/10"
-                                : ""
-                            }`}
-                            onClick={() => {
-                              formData.value = {
-                                ...formData.value,
-                                experienceLevel: level.value,
-                              };
-                              setIsSelectOpen(false);
-                            }}
-                          >
-                            <div class="font-medium text-primary-dark">
-                              {level.label}
-                            </div>
-                            <div class="text-sm text-primary-dark/60 mt-1">
-                              {level.description}
-                            </div>
-                          </button>
-                        ))}
+                      <div
+                        class="fixed inset-0 z-[90]"
+                        onClick={() => setIsSelectOpen(false)}
+                      >
+                        <div
+                          class="absolute z-[100] w-full mt-2 bg-white border border-primary-dark/20 rounded-xl shadow-xl overflow-hidden"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {experienceLevels.map((level) => (
+                            <button
+                              type="button"
+                              key={level.value}
+                              class={`w-full px-4 py-3 text-left hover:bg-primary-dark/5 transition-colors ${
+                                formData.value.experienceLevel === level.value
+                                  ? "bg-primary-dark/10"
+                                  : ""
+                              }`}
+                              onClick={() => {
+                                formData.value = {
+                                  ...formData.value,
+                                  experienceLevel: level.value,
+                                };
+                                setIsSelectOpen(false);
+                              }}
+                            >
+                              <div class="font-medium text-primary-dark">
+                                {level.label}
+                              </div>
+                              <div class="text-sm text-primary-dark/60 mt-1">
+                                {level.description}
+                              </div>
+                            </button>
+                          ))}
+                        </div>
                       </div>
                     )}
 

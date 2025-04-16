@@ -163,12 +163,12 @@ export default function HackaPrizes({
   };
 
   return (
-    <div class="w-full bg-dc-50 p-4">
+    <div class="w-full bg-dc-50 px-4 md:px-20">
       <div class="mx-auto">
         <div
           ref={sectionRef}
           id={id}
-          class="relative bg-primary-dark rounded-3xl px-4 md:px-20 py-24 md:py-40"
+          class="relative bg-primary-dark rounded-3xl px-4 md:px-20 py-12 md:py-24 md:py-40"
         >
           <div class="max-w-[1200px] mx-auto">
             <div
@@ -189,7 +189,7 @@ export default function HackaPrizes({
                 const style = variantStyles[prize.variant];
                 return (
                   <div
-                    class={`${style.bg} border-2 ${style.border} rounded-3xl p-12 relative overflow-hidden backdrop-blur-sm min-h-[360px] flex flex-col`}
+                    class={`${style.bg} border-2 ${style.border} rounded-3xl p-8 sm:p-12 relative overflow-hidden backdrop-blur-sm h-fit md:min-h-[360px] flex flex-col`}
                   >
                     {/* Trophy Icon */}
                     <div class="absolute -right-6 -top-6 w-24 h-24 flex items-center justify-center opacity-10">

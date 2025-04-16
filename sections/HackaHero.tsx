@@ -100,11 +100,11 @@ export default function HackaHero({
   ],
 }: Props) {
   return (
-    <div class="w-full bg-dc-50 p-4 h-screen">
-      <div class="mx-auto h-full">
+    <div class="w-full bg-dc-50 p-2 md:p-20">
+      <div class="mx-auto">
         <div
           id={id}
-          class="relative flex flex-col h-full bg-primary-dark rounded-3xl px-4 sm:px-8 lg:px-16 xl:px-20 overflow-hidden"
+          class="relative flex flex-col h-[80vh] md:h-[calc(100vh-160px)] bg-primary-dark rounded-3xl px-4 py-6 md:px-16 md:py-0 lg:px-20 overflow-hidden"
         >
           {/* Background Image */}
           {backgroundImage && (
@@ -122,7 +122,7 @@ export default function HackaHero({
           )}
 
           <div class="flex-1 flex items-center justify-center relative z-10">
-            <div class="max-w-[1200px] mx-auto text-primary-light opacity-0 animate-fade-up">
+            <div class="w-full max-w-[1200px] mx-auto text-primary-light opacity-0 animate-fade-up">
               <div class="text-center mb-6 md:mb-8 opacity-0 animate-fade-up [animation-delay:200ms]">
                 <Badge
                   text={badgeText}
