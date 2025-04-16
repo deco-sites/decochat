@@ -12,6 +12,12 @@ export default defineApp(async (_req, ctx) => {
 
       {/* Include Icons and manifest */}
       <Head>
+        {/* Viewport meta tag for proper mobile scaling */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+
         {/* Enable View Transitions API */}
         <meta name="view-transition" content="same-origin" />
 
