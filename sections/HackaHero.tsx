@@ -104,7 +104,7 @@ export default function HackaHero({
       <div class="mx-auto">
         <div
           id={id}
-          class="relative flex flex-col h-[80vh] md:h-[calc(100vh-160px)] bg-primary-dark rounded-3xl px-4 py-6 md:px-16 md:py-0 lg:px-20 overflow-hidden"
+          class="relative flex flex-col h-fit md:h-[calc(100vh-160px)] bg-primary-dark rounded-3xl px-4 py-6 md:px-16 md:py-0 lg:px-20 overflow-hidden"
         >
           {/* Background Image */}
           {backgroundImage && (
