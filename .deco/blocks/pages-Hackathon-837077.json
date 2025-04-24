@@ -8,7 +8,6 @@
       "description": "<p>Everyone's talking about AI Agents and MCP servers—but can you build them?<br>Whether you're a pro coder or brand-new to tech, join our Hackathon to automate tasks, supercharge your data, and conquer the AI wave.</p>",
       "ctaText": "Register now",
       "ctaLink": "#registerTop",
-      "endDate": "2025-04-25T23:00:00.000Z",
       "id": "hero",
       "badgeText": "Agents and MCP Hackathon, by deco.chat",
       "highlights": [
@@ -18,7 +17,7 @@
           "link": "https://deco.cx/discord"
         },
         {
-          "text": "April 25-26",
+          "text": "TBD",
           "icon": "event"
         },
         {
@@ -135,17 +134,17 @@
       "highlights": [
         {
           "title": "Technical Introduction & Mentorship",
-          "info": "April 25, starting 1:00pm UTC",
+          "info": "Day 1, starting 1:00pm UTC",
           "icon": "schedule"
         },
         {
           "title": "Submission Deadline",
-          "info": "April 26, 3:00pm UTC",
+          "info": "Day 2, 3:00pm UTC",
           "icon": "task_alt"
         },
         {
           "title": "Winner Announcements",
-          "info": "April 26, 7:00pm UTC (on our Discord, recording available)",
+          "info": "Day 2 7:00pm UTC (on our Discord, recording available)",
           "icon": "emoji_events"
         },
         {
@@ -178,7 +177,7 @@
       ],
       "timelineEvents": [
         {
-          "date": "April 25",
+          "date": "Day 1",
           "title": "Hackathon Officially Opens",
           "items": [
             {
@@ -548,7 +547,7 @@
           ]
         },
         {
-          "date": "April 26",
+          "date": "Day 2",
           "title": "Demo Submission and Results Announcement",
           "items": [
             {

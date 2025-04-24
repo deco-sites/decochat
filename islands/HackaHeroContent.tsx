@@ -146,33 +146,7 @@ export default function HackaHeroContent({
         </Button>
       </div>
 
-      {/* Countdown Timer */}
-      <div class="w-full mt-4 md:mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 max-w-3xl sm:max-w-xl sm:mx-auto pr-2 sm:px-2 md:px-4 opacity-0 animate-fade-up [animation-delay:1200ms]">
-        <div class="bg-primary-light/10 rounded-xl md:rounded-2xl p-2 md:p-4">
-          <div class="text-xl sm:text-2xl md:text-3xl font-semibold text-primary-light mb-0 md:mb-2">
-            {timeLeft.value.days}
-          </div>
-          <div class="text-lg md:text-lg text-primary-light/80">Days</div>
-        </div>
-        <div class="bg-primary-light/10 rounded-xl md:rounded-2xl p-2 md:p-4">
-          <div class="text-xl sm:text-2xl md:text-3xl font-semibold text-primary-light mb-0 md:mb-2">
-            {timeLeft.value.hours}
-          </div>
-          <div class="text-lg md:text-lg text-primary-light/80">Hours</div>
-        </div>
-        <div class="bg-primary-light/10 rounded-xl md:rounded-2xl p-2 md:p-4">
-          <div class="text-xl sm:text-2xl md:text-3xl font-semibold text-primary-light mb-0 md:mb-2">
-            {timeLeft.value.minutes}
-          </div>
-          <div class="text-lg md:text-lg text-primary-light/80">Minutes</div>
-        </div>
-        <div class="bg-primary-light/10 rounded-xl md:rounded-2xl p-2 md:p-4">
-          <div class="text-xl sm:text-2xl md:text-3xl font-semibold text-primary-light mb-0 md:mb-2">
-            {timeLeft.value.seconds}
-          </div>
-          <div class="text-lg md:text-lg text-primary-light/80">Seconds</div>
-        </div>
-      </div>
+
     </div>
   );
 }
